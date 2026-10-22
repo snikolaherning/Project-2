@@ -1,0 +1,11 @@
+test_bad_csv (test_lab15.EngineTests) ... ok
+test_csv_estimates (test_lab15.EngineTests) ... ok
+test_engine_edit (test_lab15.EngineTests) ... ok
+test_grid_complete (test_lab15.EngineTests) ... ok
+test_infeasible (test_lab15.EngineTests) ... ok
+test_training (test_lab15.EngineTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.034s
+
+OK
