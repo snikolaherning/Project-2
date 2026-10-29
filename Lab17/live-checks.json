@@ -1,0 +1,76 @@
+[
+  {
+    "series": "BAA",
+    "vintage": "2026-10-05",
+    "Known measured date": "2026-09-01",
+    "Known value": 6.47,
+    "Latest measured date": "2026-09-01",
+    "Latest value": 6.47,
+    "Later observations": 0,
+    "Revised common dates": 0
+  },
+  {
+    "series": "FEDFUNDS",
+    "vintage": "2026-10-05",
+    "Known measured date": "2026-09-01",
+    "Known value": 3.75,
+    "Latest measured date": "2026-09-01",
+    "Latest value": 3.75,
+    "Later observations": 0,
+    "Revised common dates": 0
+  },
+  {
+    "series": "DGS10",
+    "vintage": "2026-10-05",
+    "Known measured date": "2026-10-02",
+    "Known value": 5.28,
+    "Latest measured date": "2026-10-27",
+    "Latest value": 4.99,
+    "Later observations": 16,
+    "Revised common dates": 0
+  },
+  {
+    "series": "MORTGAGE30US",
+    "vintage": "2026-10-05",
+    "Known measured date": "2026-10-01",
+    "Known value": 7.28,
+    "Latest measured date": "2026-10-29",
+    "Latest value": 7.24,
+    "Later observations": 4,
+    "Revised common dates": 0
+  },
+  {
+    "series": "PAYEMS",
+    "vintage": "2025-01-15",
+    "Known measured date": "2024-12-01",
+    "Known value": 159536.0,
+    "Latest measured date": "2026-09-01",
+    "Latest value": 159044.0,
+    "Later observations": 21,
+    "Revised common dates": 381,
+    "December2024": {
+      "vintage": 159536.0,
+      "today": 158316.0
+    }
+  },
+  {
+    "series": "TB3MS",
+    "vintage": "2026-09-30",
+    "Known measured date": "2026-08-01",
+    "Known value": 3.72,
+    "Latest measured date": "2026-09-01",
+    "Latest value": 3.94,
+    "Later observations": 1,
+    "Revised common dates": 0
+  },
+  {
+    "series": "TB3MS",
+    "vintage": "2026-10-29",
+    "Known measured date": "2026-09-01",
+    "Known value": 3.94,
+    "Latest measured date": "2026-09-01",
+    "Latest value": 3.94,
+    "Later observations": 0,
+    "Revised common dates": 0
+  }
+]

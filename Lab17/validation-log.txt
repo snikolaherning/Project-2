@@ -1,0 +1,10 @@
+2026-10-29 13:33:08.069 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+2026-10-29 13:33:08.071 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+test_duplicate_refused (test_asof_app.ComparisonTests) ... ok
+test_missing_and_revisions (test_asof_app.ComparisonTests) ... ok
+test_no_known_observations (test_asof_app.ComparisonTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.025s
+
+OK
