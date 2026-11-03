@@ -1,18 +1,34 @@
-Metadata
-name
-buffett-edgar
-description
-Analyze a ticker with five fiscal years of SEC EDGAR facts, deterministic Buffett checks, and a short Buffett-style business-quality memo. Use for this SEC-only lab; excludes stock-price valuation.
+---
+name: buffett-edgar
+description: Analyze a ticker using five fiscal years of SEC EDGAR facts, computed Buffett checks, and a business-quality memo.
+---
 
-Run python3 .agents/skills/buffett-edgar/scripts/edgar.py TICKER from the lab folder. Use --refresh to retrieve current SEC facts. Requests identify Stefan, sherning@purdue.edu. Never install FAskills or use its paid data services.
+Run `python3 .agents/skills/buffett-edgar/scripts/edgar.py TICKER`
+from the lab folder.
 
-Read the printed table and checks. Code owns all arithmetic. Annual periods match exact start/end dates; later 10-K comparatives may revise values. Missing tags stay not found; missing inputs make checks not known. Never fill gaps from memory. ROE is net income divided by year-end equity. Owner earnings is explicitly a simplified operating-cash-flow minus total-capital-spending proxy; maintenance capex cannot be inferred reliably from these facts.
+Use only SEC EDGAR data. Never install FAskills or use paid data.
+The script identifies Stefan, sherning@purdue.edu, in its User-Agent.
 
-Write a short memo to memos/TICKER.md in a Buffett-inspired voice, labeled as an educational simulation. Choose own the business, watch it, or pass based on business quality, not price. Discuss consistency, earning power, and the limits of judging a durable moat or management from this table alone. Use only printed numerical values, in USD millions and the printed percentage precision. Do not invent scores, growth rates, price targets, outside facts, or holdings. If owner earnings are missing, explicitly say you cannot judge owner earnings.
+Code computes every number and all three checks:
+- ROE at least 15% every year.
+- Owner earnings positive every year.
+- Owner earnings grew from first year to last.
 
-Call unsupported_numbers(memo, result) from the bundled script to verify the saved memo and correct unsupported numbers. This is a numeric provenance check, not proof that a number is attributed to the correct metric. The Streamlit app reads the same saved memo and lets the student edit it for the manual probe.
+ROE uses net income divided by year-end equity.
+Owner earnings is a simplified operating cash flow minus total
+capital spending proxy, not estimated maintenance capital spending.
 
-The student supplies their own trust/decision sentence after discussing the evidence; do not fabricate their reflection.
+Missing inputs remain "not found"; checks requiring them are
+"not known". Never estimate missing values.
 
-Reference philosophy: https://github.com/CinderZhang/FAskills/blob/main/financial-researcher/experts/warren_buffett.md . Use its emphasis on understandable businesses, durable advantages, and owner earning power. The lab overrides its paid data, price forecasts, and valuation requirements.
+Using only the script's printed numbers, write a short
+Buffett-inspired educational memo to `memos/TICKER.md`.
+Choose "own the business", "watch it", or "pass".
+Judge business quality, not stock price. Do not use price data.
+Discuss limitations: the table alone cannot establish a durable
+competitive advantage or management quality.
 
+If owner earnings are missing, say you cannot judge owner earnings.
+Use printed values and precision, with dollar amounts in USD millions.
+Validate the memo with the script's `unsupported_numbers()` function.
+The student supplies their own trust/reflection sentence.
