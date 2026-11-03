@@ -1,0 +1,218 @@
+{
+  "ticker": "JPM",
+  "company": "JPMORGAN CHASE & CO",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+  "method": "USD millions; ROE uses year-end equity; owner earnings is an OCF minus total capex proxy, not estimated maintenance capex.",
+  "rows": [
+    {
+      "fiscal_year": 2021,
+      "start": "2021-01-01",
+      "end": "2021-12-31",
+      "revenue": {
+        "value": 121649000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2024-02-16",
+        "accession": "0000019617-24-000225"
+      },
+      "net_income": {
+        "value": 48334000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2024-02-16",
+        "accession": "0000019617-24-000225"
+      },
+      "operating_cash_flow": {
+        "value": 78084000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2024-02-16",
+        "accession": "0000019617-24-000225"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "equity": {
+        "value": 294127000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2024-02-16",
+        "accession": "0000019617-24-000225"
+      },
+      "roe": {
+        "value": 16.433037429409744,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      }
+    },
+    {
+      "fiscal_year": 2022,
+      "start": "2022-01-01",
+      "end": "2022-12-31",
+      "revenue": {
+        "value": 128695000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2025-02-14",
+        "accession": "0000019617-25-000270"
+      },
+      "net_income": {
+        "value": 37676000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2025-02-14",
+        "accession": "0000019617-25-000270"
+      },
+      "operating_cash_flow": {
+        "value": 107119000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2025-02-14",
+        "accession": "0000019617-25-000270"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "equity": {
+        "value": 292332000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2025-02-14",
+        "accession": "0000019617-25-000270"
+      },
+      "roe": {
+        "value": 12.888086148625536,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      }
+    },
+    {
+      "fiscal_year": 2023,
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "revenue": {
+        "value": 158104000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "net_income": {
+        "value": 49552000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "operating_cash_flow": {
+        "value": 12974000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "equity": {
+        "value": 327878000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "roe": {
+        "value": 15.112938349020064,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      }
+    },
+    {
+      "fiscal_year": 2024,
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "revenue": {
+        "value": 177556000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "net_income": {
+        "value": 58471000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "operating_cash_flow": {
+        "value": -42012000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "equity": {
+        "value": 344758000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "roe": {
+        "value": 16.96001253052866,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      }
+    },
+    {
+      "fiscal_year": 2025,
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "revenue": {
+        "value": 182447000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "net_income": {
+        "value": 57048000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "operating_cash_flow": {
+        "value": -147782000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "equity": {
+        "value": 362438000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-13",
+        "accession": "0001628280-26-008131"
+      },
+      "roe": {
+        "value": 15.74007140531622,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      }
+    }
+  ],
+  "checks": {
+    "ROE at least 15% every year": "fail",
+    "Owner earnings positive every year": "not known",
+    "Owner earnings grew first to last": "not known"
+  }
+}
