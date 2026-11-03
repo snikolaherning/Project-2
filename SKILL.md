@@ -1,4 +1,4 @@
----
+buffett-lab 2/.agents/skills/buffett-edgar/SKILL.md---
 name: buffett-edgar
 description: Analyze a ticker with five fiscal years of SEC EDGAR facts, deterministic Buffett checks, and a short Buffett-style business-quality memo. Use for this SEC-only lab; excludes stock-price valuation.
 ---
