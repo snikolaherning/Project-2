@@ -1,4 +1,4 @@
-"""SEC-only Buffett lab: deterministic annual facts, checks, and memo validation."""
+buffett-lab 2/.agents/skills/buffett-edgar/scripts/edgar.py"""SEC-only Buffett lab: deterministic annual facts, checks, and memo validation."""
 import argparse
 import datetime as dt
 import json
