@@ -1,0 +1,20 @@
+{
+  "2.0": {
+    "configured": 2.0,
+    "checks": {
+      "Current ratio at least 2.0, latest year": "fail",
+      "Net income positive every year": "pass",
+      "Net income grew first to last": "pass"
+    }
+  },
+  "1.0": {
+    "configured": 1.0,
+    "checks": {
+      "Current ratio at least 1.0, latest year": "pass",
+      "Net income positive every year": "pass",
+      "Net income grew first to last": "pass"
+    }
+  },
+  "restored_setting": 2.0,
+  "student_retained_threshold_and_reason": "Threshold kept at 2.0, the assigned defensive standard. Costco\u2019s fail reflects its low working capital model, where it sells inventory before paying suppliers, not financial distress. Lowering the rule to fit one company would weaken the screen for all others."
+}

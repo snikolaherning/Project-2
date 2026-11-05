@@ -1,0 +1,369 @@
+{
+  "ticker": "NVDA",
+  "company": "NVIDIA CORP",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+  "method": "USD millions; ROE uses year-end equity; owner earnings is an OCF minus total capex proxy, not estimated maintenance capex. Current ratio = current assets / current liabilities; leverage = liabilities / equity. Nonpositive denominators are not known.",
+  "rows": [
+    {
+      "fiscal_year": 2022,
+      "start": "2021-02-01",
+      "end": "2022-01-30",
+      "revenue": {
+        "value": 26914000000,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "filed": "2022-03-18",
+        "accession": "0001045810-22-000036"
+      },
+      "net_income": {
+        "value": 9752000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2024-02-21",
+        "accession": "0001045810-24-000029"
+      },
+      "operating_cash_flow": {
+        "value": 9108000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2024-02-21",
+        "accession": "0001045810-24-000029"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "liabilities": {
+        "value": 17575000000,
+        "tag": "us-gaap:Liabilities",
+        "filed": "2023-02-24",
+        "accession": "0001045810-23-000017"
+      },
+      "current_assets": {
+        "value": 28829000000,
+        "tag": "us-gaap:AssetsCurrent",
+        "filed": "2023-02-24",
+        "accession": "0001045810-23-000017"
+      },
+      "current_liabilities": {
+        "value": 4335000000,
+        "tag": "us-gaap:LiabilitiesCurrent",
+        "filed": "2023-02-24",
+        "accession": "0001045810-23-000017"
+      },
+      "equity": {
+        "value": 26612000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "roe": {
+        "value": 36.64512250112731,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      },
+      "current_ratio": {
+        "value": 6.650288350634371,
+        "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+      },
+      "liabilities_to_equity": {
+        "value": 0.6604163535247257,
+        "tag": "derived: us-gaap:Liabilities / equity"
+      }
+    },
+    {
+      "fiscal_year": 2023,
+      "start": "2022-01-31",
+      "end": "2023-01-29",
+      "revenue": {
+        "value": 26974000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "net_income": {
+        "value": 4368000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "operating_cash_flow": {
+        "value": 5641000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "liabilities": {
+        "value": 19081000000,
+        "tag": "us-gaap:Liabilities",
+        "filed": "2024-02-21",
+        "accession": "0001045810-24-000029"
+      },
+      "current_assets": {
+        "value": 23073000000,
+        "tag": "us-gaap:AssetsCurrent",
+        "filed": "2024-02-21",
+        "accession": "0001045810-24-000029"
+      },
+      "current_liabilities": {
+        "value": 6563000000,
+        "tag": "us-gaap:LiabilitiesCurrent",
+        "filed": "2024-02-21",
+        "accession": "0001045810-24-000029"
+      },
+      "equity": {
+        "value": 22101000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "roe": {
+        "value": 19.763811592235644,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      },
+      "current_ratio": {
+        "value": 3.515617857687033,
+        "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+      },
+      "liabilities_to_equity": {
+        "value": 0.8633545993393964,
+        "tag": "derived: us-gaap:Liabilities / equity"
+      }
+    },
+    {
+      "fiscal_year": 2024,
+      "start": "2023-01-30",
+      "end": "2024-01-28",
+      "revenue": {
+        "value": 60922000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "net_income": {
+        "value": 29760000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "operating_cash_flow": {
+        "value": 28090000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "liabilities": {
+        "value": 22750000000,
+        "tag": "us-gaap:Liabilities",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "current_assets": {
+        "value": 44345000000,
+        "tag": "us-gaap:AssetsCurrent",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "current_liabilities": {
+        "value": 10631000000,
+        "tag": "us-gaap:LiabilitiesCurrent",
+        "filed": "2025-02-26",
+        "accession": "0001045810-25-000023"
+      },
+      "equity": {
+        "value": 42978000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "roe": {
+        "value": 69.24472986178975,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      },
+      "current_ratio": {
+        "value": 4.171291505973097,
+        "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+      },
+      "liabilities_to_equity": {
+        "value": 0.529340592861464,
+        "tag": "derived: us-gaap:Liabilities / equity"
+      }
+    },
+    {
+      "fiscal_year": 2025,
+      "start": "2024-01-29",
+      "end": "2025-01-26",
+      "revenue": {
+        "value": 130497000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "net_income": {
+        "value": 72880000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "operating_cash_flow": {
+        "value": 64089000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "liabilities": {
+        "value": 32274000000,
+        "tag": "us-gaap:Liabilities",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "current_assets": {
+        "value": 80126000000,
+        "tag": "us-gaap:AssetsCurrent",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "current_liabilities": {
+        "value": 18047000000,
+        "tag": "us-gaap:LiabilitiesCurrent",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "equity": {
+        "value": 79327000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "roe": {
+        "value": 91.87288060811576,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      },
+      "current_ratio": {
+        "value": 4.439851498864077,
+        "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+      },
+      "liabilities_to_equity": {
+        "value": 0.4068476054811098,
+        "tag": "derived: us-gaap:Liabilities / equity"
+      }
+    },
+    {
+      "fiscal_year": 2026,
+      "start": "2025-01-27",
+      "end": "2026-01-25",
+      "revenue": {
+        "value": 215938000000,
+        "tag": "us-gaap:Revenues",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "net_income": {
+        "value": 120067000000,
+        "tag": "us-gaap:NetIncomeLoss",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "operating_cash_flow": {
+        "value": 102718000000,
+        "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "capital_spending": {
+        "value": null,
+        "tag": "not found"
+      },
+      "liabilities": {
+        "value": 49510000000,
+        "tag": "us-gaap:Liabilities",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "current_assets": {
+        "value": 125605000000,
+        "tag": "us-gaap:AssetsCurrent",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "current_liabilities": {
+        "value": 32163000000,
+        "tag": "us-gaap:LiabilitiesCurrent",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "equity": {
+        "value": 157293000000,
+        "tag": "us-gaap:StockholdersEquity",
+        "filed": "2026-02-25",
+        "accession": "0001045810-26-000021"
+      },
+      "roe": {
+        "value": 76.33333969089534,
+        "tag": "derived: net_income / year-end equity * 100"
+      },
+      "owner_earnings": {
+        "value": null,
+        "tag": "derived: operating_cash_flow - capital_spending"
+      },
+      "current_ratio": {
+        "value": 3.905263812455306,
+        "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+      },
+      "liabilities_to_equity": {
+        "value": 0.3147628947251308,
+        "tag": "derived: us-gaap:Liabilities / equity"
+      }
+    }
+  ],
+  "checks": {
+    "ROE at least 15% every year": "pass",
+    "Owner earnings positive every year": "not known",
+    "Owner earnings grew first to last": "not known"
+  },
+  "thresholds": {
+    "wood_current_ratio": 2.0,
+    "buffett_roe_percent": 15,
+    "burry_liabilities_multiple": 2
+  },
+  "panel": {
+    "Buffett": {
+      "ROE at least 15% every year": "pass",
+      "Owner earnings positive every year": "not known",
+      "Owner earnings grew first to last": "not known"
+    },
+    "Cathie Wood": {
+      "Current ratio at least 2.0, latest year": "pass",
+      "Net income positive every year": "pass",
+      "Net income grew first to last": "pass"
+    },
+    "Burry": {
+      "Operating cash flow at least net income every year": "fail",
+      "Liabilities no more than twice equity, latest year": "pass"
+    }
+  }
+}
