@@ -1,68 +1,33 @@
-# Lab 19 — Legend Panel
+Codex assisted with code, validation and documentation. The analysis and decision are Stefan’s; education, not investment advice.
 
-Student: Stefan (sherning@purdue.edu). Partner: Anika.
+# Project 2 — portfolio readiness
 
-Instructor clarification reported by Stefan: replace Graham fully with Cathie Wood, keeping the same assigned checks. Wood's skill explicitly distinguishes these classroom defensive rules from her actual investment method. Discussion completed and Lab 18 COST app loading confirmed by Stefan.
+**Committee ask: pilot 85% BIL / 15% VT, not adoption.** The nominal objective for the changed-input experiment is 4.5% annually with at least 20% BIL reserves. Full mandate compliance, including the stated 10% loss limit and withdrawal needs, remains unresolved. This is a Lab 20 readiness repair, not a claim that all Project 2 requirements are complete.
 
-## Run
+## One-command cold run
 
-From this folder:
+Install Python 3.9+ first. Download the repository using Code → Download ZIP and unzip, or clone it. Open Terminal/PowerShell in the extracted repository folder (the folder containing this README and run_portfolio.py), then run:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python scripts/panel.py COST
-.venv/bin/python scripts/panel.py NVDA
-.venv/bin/python -m streamlit run app.py --server.port 8519
-.venv/bin/python -m unittest discover -s scripts -p test_panel.py -v
+python3 run_portfolio.py
 ```
 
-Open Codex in this folder to discover the three skills under `.agents/skills`. Ask each investor skill to read the shared script output and write its own memo. This app reads the saved AI-written memos; it does not call a paid model API or generate unseen-ticker memos automatically.
+On Windows, use `py run_portfolio.py` if `python3` is unavailable. The launcher creates a local environment and installs pinned Streamlit from PyPI; first launch needs internet access. It then starts the portfolio app on port 8515. Open http://localhost:8515 if the browser does not open automatically. Stop another app using that port before launching, or record the exact port error. Stop this app with Ctrl+C.
 
-The app retains the Lab 18 owner-earnings/net-income chart, tagged table, Buffett checks, SEC source, editable memo, number warning, and disclosure. It adds current assets, current liabilities, total liabilities, two ratios, Wood and Burry checks, three verdicts and side-by-side memos, and warnings for all memos. The original Lab 18 folder is preserved separately.
+**This is the portfolio entry point.** The older root app.py is the Lab 19 company panel and is not the portfolio cold run. It is preserved as supporting coursework.
 
-## Data and missing-value rules
+The bundled club CSV loads automatically: BIL, IEF, LQD and VT. No manual file upload, API key or paid source is needed. Start at 4.5% return objective, 20% reserves, only BIL reserve eligible, all months. Read both allocation tables and the green implemented-constraint verdict, plus the yellow unresolved-full-mandate warning. Change the return objective to 5.0% and back to 4.5% to reproduce the recorded comparison. The as-loaded/current columns compare estimates under the same objective; they are not the before/after objective comparison. Download each separate run as JSON.
 
-SEC EDGAR only, keyless, with Stefan's identity header. Raw SEC responses are cached in data; Refresh retrieves new data. Annual periods must match exact dates and annual durations. Later 10-K comparative facts may revise prior values. ROE uses year-end equity; owner earnings is OCF minus total capital spending, a simplified proxy rather than estimated maintenance capex. All financial displays are USD millions except percentages and ratios. XBRL tags and filing provenance remain available.
+## Visible decision and evidence
 
-NVIDIA's recent narrower `PaymentsToAcquirePropertyPlantAndEquipment` facts are not found. SEC reports a broader `PaymentsToAcquireProductiveAssets` series, which is not silently substituted for the narrower definition. Consequently owner earnings and the affected Buffett checks remain not found/not known. This is a tag-definition limitation, not a claim NVIDIA spends nothing on productive assets. A broader proxy would need a documented rule change and validation. Missing values never become zero. Current ratio and liabilities/equity with nonpositive denominators are not known.
+- [Decision memo](docs/decision-memo.md)
+- [Visible before/after output](docs/output-snapshot.md)
+- [Validation and AI use](docs/validation-and-ai-use.md)
+- [Lab 20 cold-run record](docs/lab20-readiness.md)
+- [Original locked prediction and appended result](lab20-changed-input.md)
+- [Before/after JSON evidence](evidence)
+- Portfolio source: [app](portfolio-tool/app.py), [engine](portfolio-tool/portfolio.py), [bundled prices](portfolio-tool/prices.csv), [source evidence](portfolio-tool/source-evidence).
 
-## Project 2 company selection
+## Limitations and remaining Project 2 work
 
-Fund: VT, from the earlier BIL/IEF/LQD/VT universe; student chose VT for this lab.
-
-Company: NVIDIA, ticker NVDA, CIK 0001045810. Vanguard's VT fact sheet, holdings as of September 30, 2026, lists NVIDIA as the largest holding at 4.6%. Checked November 5, 2026. This is the latest issuer fact sheet verified for this exercise, not a claim about intraday holdings.
-
-Source: https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3141.pdf
-
-## Known-answer verification
-
-COST current ratios: 1.02, 1.07, 0.97, 1.03, 1.06.
-COST liabilities/equity: 2.11, 1.75, 1.96, 1.64, 1.49.
-
-At the saved current-ratio threshold of 2.0: Buffett passes all three checks; Wood passes the earnings checks and fails liquidity; Burry passes both checks. Calculations matched every supplied reference value. Reference values occur in the test, never the production calculations.
-
-The actual Wood SKILL.md threshold was changed to 1.0 and COST rerun: all Wood checks passed. It was restored to 2.0 with the student subsequently choosing to retain 2.0. Machine-readable evidence: data/threshold-probe.json. The app also offers a temporary threshold input, clearly labeled when saved memos describe a different setting. A revised retained setting requires rerunning/revising the corresponding memo.
-
-NVDA: Buffett passes ROE, owner-earnings checks not known; Wood passes all checks; Burry fails cash backing and passes liabilities/equity. Six memos were written from printed values and passed numerical provenance validation. Tests inject 40.0% separately into every investor's memo. The validator checks matching values, not whether each claim is justified or attributed to the right metric.
-
-## Student checkout still to complete
-
-- At minute thirty, open Brightspace → Quizzes → Lab 19.
-- Review the panel in the browser on COST and NVDA; personally test the temporary threshold and unprinted-number warning.
-- State the retained threshold and why; add the line under Wood's memo. The student retained 2.0; see the Wood memos and CHECKOUT.md.
-- Explain `wood_checks()` in scripts/panel.py line by line to Anika without AI, including missing-input handling; swap.
-- Argue the NVDA bull and bear cases from this panel, two sentences each, then swap.
-- Supply the Project 2 screening decision with a specific condition and reflect on agreement/splits and threshold sensitivity.
-- Save those statements using the app's checkout fields or add them to CHECKOUT.md. Do not submit the pending items as completed.
-- Upload the complete folder to GitHub, including `.agents` and scripts; submit links to the three SKILL.md files, scripts/edgar.py, scripts/panel.py, app.py, COST/NVDA memos and completed checkout evidence as requested by the quiz. No GitHub publication is performed automatically.
-
-## Why the personas split
-
-They apply different rules to identical facts: earning power for Buffett, assigned liquidity and earnings rules for Wood, cash backing and liabilities for Burry. These are three analyses using a shared fact table, not three independent confirmations of the same proposition. A threshold change can change a verdict without changing the business.
-
-Methodology sources: https://github.com/CinderZhang/FAskills/blob/main/financial-researcher/experts/ben_graham.md and https://github.com/CinderZhang/FAskills/blob/main/financial-researcher/experts/michael_burry.md . Broader source-page valuation, news and paid-data requests are excluded by the lab rules.
-
-## Checkout status update
-
-Stefan confirmed the code-explanation swap and bull/bear role swap with Anika, supplied both cases, retained the assigned threshold, and supplied a conditional screening decision. See CHECKOUT.md for the recorded responses and qualifications. Earlier workflow checklist entries describe the required activities; GitHub publication and Brightspace submission still remain.
+The experiment changes the client objective; it does not improve underlying fund returns. Historical arithmetic return estimates are not forecasts. The implemented search enforces long-only weights, full investment, the return objective and reserve floor on a five-point grid. It does not guarantee future returns, maximum losses or withdrawal coverage. Fees are not separately modeled. Full baseline comparisons, point-in-time signal integration, broader stress, final mandate/benchmark specification, and videos/transcripts/manifest remain to be audited and completed. See the validation document. Do not infer completion from a successful app launch.

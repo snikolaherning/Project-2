@@ -1,0 +1,1 @@
+Codex local UI validation passed: bundled CSV loads; 60 monthly returns; objective 4.5% -> return 4.84%; objective 5.0% -> return 5.25%; partial constraint verdict and unresolved full-mandate warning visible. Python syntax passed. This is not Ross’s independent retry.

@@ -1,0 +1,32 @@
+{
+  "downloaded_at": "2026-10-22T17:41:57.923288+00:00",
+  "sources": [
+    [
+      "BIL",
+      "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1630454400&period2=1790812800&interval=1mo&events=div%2Csplits",
+      61
+    ],
+    [
+      "IEF",
+      "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1630454400&period2=1790812800&interval=1mo&events=div%2Csplits",
+      61
+    ],
+    [
+      "LQD",
+      "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1630454400&period2=1790812800&interval=1mo&events=div%2Csplits",
+      61
+    ],
+    [
+      "VT",
+      "https://query2.finance.yahoo.com/v8/finance/chart/VT?period1=1630454400&period2=1790812800&interval=1mo&events=div%2Csplits",
+      61
+    ]
+  ],
+  "raw_sha256": {
+    "BIL": "5a605df1e66896a1a18a18a98d305195e9fd540bd184ffbd03c7625f86012f97",
+    "IEF": "1a7927f9db5bc153932f2ceec22d2ead337e7bcf9bfd23f50b153ed652d6e609",
+    "LQD": "d8f9528f220645f573eb2afd42a44a37cc30d09fe8531a8a958a20f917f878e7",
+    "VT": "78ee2f6bde3f9be81fecf5b3c0fe7efa094c68a3fd3b0342638357e97d36dcde"
+  },
+  "csv_sha256": "e127b710c7a6ac11d448c6bdda4d8430527d3f3ec2156c1ea419401f6fe0c7d3"
+}

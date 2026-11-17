@@ -1,0 +1,44 @@
+{
+  "universe": [
+    "BIL",
+    "IEF",
+    "LQD",
+    "VT"
+  ],
+  "objective": 0.05,
+  "reserve_minimum": 0.2,
+  "reserve_indices": [
+    0
+  ],
+  "current_returns": [
+    0.03594273305333564,
+    -0.017887110629011695,
+    -0.00805988910247737,
+    0.11895224911573088
+  ],
+  "last_36": false,
+  "as_loaded": {
+    "weights": [
+      0.8,
+      0.0,
+      0.0,
+      0.2
+    ],
+    "expected_return": 0.052544636265814695,
+    "volatility": 0.030936777531381666,
+    "reserve_weight": 0.8
+  },
+  "current": {
+    "weights": [
+      0.8,
+      0.0,
+      0.0,
+      0.2
+    ],
+    "expected_return": 0.052544636265814695,
+    "volatility": 0.030936777531381666,
+    "reserve_weight": 0.8
+  },
+  "largest_change_points": 0.0,
+  "csv_sha256": "e127b710c7a6ac11d448c6bdda4d8430527d3f3ec2156c1ea419401f6fe0c7d3"
+}
