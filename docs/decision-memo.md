@@ -1,33 +1,42 @@
-Codex assisted with calculations, code and documentation. The analysis and decision are Stefan’s; education, not investment advice.
+Codex was used for implementation, calculation checks, and drafting.
+The analysis and final decision are mine; education, not investment advice.
 
-# Decision memo — November 17, 2026
+# Committee decision memo — draft for student approval
 
-## Student decision, preserved
+November 17, 2026. Intended user: university club investment committee. Decision horizon: five years; estimates are annual, nominal USD returns.
 
-Pilot 85/15 instead of adopting it. I’d reverse that if the mix still returns at least 4.5% with VT at 6.5%, using both the all-month and recent BIL estimates. That would make it adopt. If T-bill returns fall below about 4.15%, I’d reject it.
+**Committee ask: approve a simulation-only pilot, with 0% live allocation today.** Carry forward the updated student choice of 85% BIL / 15% VT, with a 10–20% VT / 80–90% BIL simulation research range; this range is a research envelope, not a validated allocation recommendation. Earlier student-approved Lab 15 judgment favored testing 75% BIL / 25% VT and rejected adopting the historically optimized 95/5 mix.
 
-## Interpretation and limitations
+The mandate targets 5% annually and at least 20% Treasury-bill funds. The app compares equal weight and inverse volatility with a constrained minimum-volatility portfolio, alongside the 60/40 VT/LQD benchmark. Each has explicit rule results. Historical prices are frozen as retrieved October 22; changing windows changes estimates, not realized future performance. The proposed Project 2 target is net of a 25-basis-point annual implementation drag; this additional conservative convention needs student approval.
 
-Pilot means further testing, not a real-money allocation authorization. The 85% BIL / 15% VT candidate fails the specified all-month-BIL stress. Passing both expected-return stresses would satisfy the student's proposed return hurdle, but adoption also requires validating loss limits, withdrawals, costs and the remaining mandate. About 4.15% is a scenario-specific BIL expected-return break-even point, not a guaranteed realized-return floor or a reason to reject every possible allocation.
+| Scenario | Fixed 75/25 net estimate | Fixed historical max drawdown | Numerical verdict | Constrained BIL/IEF/LQD/VT |
+|---|---:|---:|---|---|
+| historical_60 | 5.42% | 6.58% | PASS | 80% / 0% / 0% / 20% |
+| historical_36 | 8.09% | 1.36% | PASS | 90% / 0% / 0% / 10% |
+| vt_7_recent | 4.77% | 1.36% | FAIL | 65% / 0% / 0% / 35% |
+| vt_6_5_recent | 4.65% | 1.36% | FAIL | 50% / 0% / 10% / 40% |
+| cost_100bps | 4.02% | 1.42% | FAIL | 35% / 0% / 0% / 65% |
+| reserve_90 | 4.77% | 1.36% | FAIL | Infeasible |
 
-# Visible output — Lab 20
+These stresses challenge a fixed candidate as well as showing reoptimization. Reoptimizing after each stress does not establish that a previously chosen allocation survives. The drag is a scenario allowance, not a measured turnover estimate; fund expenses already affect adjusted returns. No claim of realized after-tax performance is made.
 
-Historical club estimates; 60 monthly returns, 2021-09-30 to 2026-09-30. Risk is sample volatility annualized; returns are arithmetic annualized means. No separately modeled costs.
+TB3MS supplies point-in-time rate context for BIL. Use the last observation available in the decision-date ALFRED vintage; monthly observation labels alone do not prove availability. It has no automatic weight effect. The preserved September 30 lab comparison excludes the not-yet-released September observation.
 
-| Metric | 5.0% objective | 4.5% objective |
-|---|---:|---:|
-| BIL / VT | 80% / 20% | 85% / 15% |
-| IEF / LQD | 0% / 0% | 0% / 0% |
-| Expected return | 5.2545% | 4.8394% |
-| Volatility | 3.0937% | 2.3654% |
-| Reserve share | 80% | 85% |
-| Return/reserve checks | pass | pass |
-| Full mandate verdict | unresolved | unresolved |
+Do not advance to live adoption until protected spending and compliance with the stated loss limit are demonstrated, the existing locked experiment chronology is documented, and an independent user reproduces the app. Monitor reserve breaches, net target shortfalls across VT assumptions of 6.5–7.5%, both estimation windows, costs and source timing. Stop on infeasibility, a failed implemented rule, or unverified timing; quarantine suspect data. Annualized volatility cannot cap losses. The coarse grid may miss better or feasible continuous allocations. No untouched holdout has been demonstrated.
 
-Fixed 85/15 stress with VT at 6.5%: all-month BIL estimate 3.5943% produces 4.0301%; recent BIL estimate 4.3660% produces 4.6861%. The latter is a historical recent-window estimate, not today's yield. BIL break-even estimate: 4.1471%. Below that level, the fixed candidate misses 4.5% under this specific stress. This is not a universal rejection threshold.
+## Student mandate clarification — November 17, 2026
 
-## Reflection
+Student selected a 10% maximum peak-to-trough investment loss, full protection of the next 12 months of spending, and one withdrawal in late August or September of up to 5% of the reserve. Operational interpretation: set the approved dollar spending budget at the annual decision date, with a 5% ceiling based on reserve value then; keep that dollar obligation protected after market losses. Measure investment drawdown on cash-flow-adjusted NAV so the annual withdrawal does not count as a market loss. This interpretation should be confirmed against the club's actual budget.
 
-Ross found that the root README pointed at the investor panel rather than the portfolio tool; that navigation failure was not obvious from working locally. Separately, the stress analysis revealed dependence on BIL's estimated return as well as VT's. A recent-window historical estimate cannot be assumed to persist. The historical sample and 2.3654% volatility do not establish a maximum loss; we have not proved that the estimate understates true risk or independently counted bear markets.
+The historical screen uses monthly rebalanced constant weights, monthly adjusted total returns, and annual implementation drag divided by 12. Include starting NAV in the high-water mark. It is descriptive in-sample evidence, not a point-in-time trading backtest. Monthly observations can miss intramonth drawdowns. The search now rejects grid candidates exceeding 10% observed monthly drawdown in the active window. It does not simulate stop-order fills or certify a future hard cap.
 
-Stefan will retain the five-point grid, supplied price dataset and volatility risk measure before the deadline, disclose their limitations, and avoid rebuilding the engine. The code explanation and role swap with Ross were confirmed by Stefan.
+Protecting spending requires a separately identified dollar account and due-date cash availability. A proposed cash or maturity-matched direct Treasury sleeve is outside the current ETF universe and has not yet been implemented. BIL alone is not evidence of complete principal protection. All current portfolios therefore FAIL full live mandate approval even if their numerical screen passes. Existing return and covariance results describe the ETF prototype, not a portfolio with a new protected sleeve; adding that sleeve requires recalculating expected return, risk and the mandate bridge.
+
+Proposed monitoring: review cash-flow-adjusted drawdown each trading day; 8% is an analyst-proposed early-warning level, not a student-approved limit. At 10%, stop further risk deployment and refer allocation reduction to committee review. If the protected dollar account cannot meet the budget on time, stop approval. A stop trigger cannot guarantee a 10% maximum loss, so **reject live adoption under the hard cap today; pilot only in simulation with 0% live allocation**.
+
+Sources: [TreasuryDirect: bills pay face value at maturity](https://www.treasurydirect.gov/marketable-securities/treasury-bills/); [SEC: stop price is not a guaranteed execution price](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14). Nominal maturity cash flows do not guarantee a stable daily market value or an inflation-adjusted spending amount.
+
+
+## Updated student decision from Lab 20
+
+The updated repository records the student choosing simulation-only pilot of 85/15 rather than adoption. The original gross-return comparison and reflection are preserved in docs/lab20-decision-memo.md. This committee build adds 25 basis points of annual drag and a historical drawdown screen; distinguish those results from the original experiment. Passing return hurdles alone does not resolve the full mandate.

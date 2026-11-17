@@ -2,7 +2,7 @@
 from pathlib import Path
 import os,subprocess,sys,venv
 root=Path(__file__).resolve().parent
-folder=root/'portfolio-tool'
+folder=root
 env=folder/'.venv'
 python=env/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
 if not python.exists():

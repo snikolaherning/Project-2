@@ -1,83 +1,40 @@
-"""Run from this folder: python -m streamlit run app.py"""
+"""Interactive committee app. Launch: python -m streamlit run app.py"""
 import json
-from pathlib import Path
-import sys
-import pandas as pd
 import streamlit as st
-
-ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT / 'scripts'))
-import panel
-
-st.set_page_config(page_title='Legend panel — Lab 19', layout='wide')
-st.title('Legend panel — Buffett · Cathie Wood · Burry')
-st.caption('data from SEC EDGAR; built with AI help, a learning demonstration, not investment advice.')
-st.caption('Cathie Wood uses the instructor-assigned defensive checks. These are classroom rules, not her actual investment method.')
-ticker = st.text_input('Ticker', 'COST').strip().upper()
-threshold = st.number_input('Cathie Wood current-ratio threshold — temporary app probe', min_value=0.1,
-                            value=panel.wood_threshold(), step=0.1)
-st.caption('The saved default comes from the Wood SKILL.md. Change its Current-ratio threshold line to retain a new default.')
-refresh = st.button('Refresh SEC data')
+import pandas as pd
+from committee import run, report
+st.set_page_config(page_title='Club reserve | Investment committee',layout='wide')
+st.title('University club reserve — committee workspace')
+st.caption('Codex assisted with code, analysis checks and documentation. The analysis and decision belong to the student; education, not investment advice.')
+st.warning('Research prototype: PILOT in simulation only. Live allocation: 0% pending protected spending implementation, loss-cap evidence and validation.')
+st.write('Five-year horizon · BIL / IEF / LQD / VT · 5% annual nominal net expected-return target · minimum 20% BIL · long only · no leverage. Benchmark: 60% VT / 40% LQD.')
+st.info('Mandate: maximum 10% peak-to-trough investment drawdown; fully protect the next 12 months of spending; one late-August/September withdrawal up to 5% of reserve. Historical monthly drawdown is a screen, not a guaranteed loss cap. Every current ETF portfolio FAILS full live mandate approval because the protected spending account and hard cap are not demonstrated.')
+st.caption('Book the approved annual dollar budget at the school-year decision date, capped at 5% of the reserve then; do not shrink that protected amount after losses. Treat withdrawals as external cash flows when measuring drawdown. BIL is not assumed to guarantee principal. Proposed separate cash/maturity-matched Treasury spending sleeve requires implementation beyond this ETF prototype.')
+with st.sidebar:
+    st.header('Stress controls')
+    objective=st.number_input('Net annual return objective (%)',min_value=0.0,max_value=100.0,value=5.0,step=.5)/100
+    recent=st.checkbox('Use last 36 monthly returns')
+    override=st.checkbox('Override VT expected return',value=False)
+    vt=st.number_input('VT annual expected return (%)',value=7.0,step=.5)/100
+    costs=st.number_input('Annual implementation drag (basis points)',0,1000,25,25)
+    reserve=st.slider('BIL minimum (%)',20,100,20,5)/100
+    st.caption('Cost is an annual scenario haircut, not an estimated turnover fee. Fund expenses are already reflected in historical adjusted returns; avoid treating this as an additional fund expense.')
 try:
-    result = panel.analyze_panel(ticker, refresh, threshold)
-except Exception as error:
-    st.error(str(error))
-    st.stop()
-st.subheader(result['company'])
-st.caption(result['method'])
-st.write('Printed thresholds:', result['thresholds'])
-chart = pd.DataFrame([{'Fiscal year': str(r['fiscal_year']),
-    'Owner earnings': None if r['owner_earnings']['value'] is None else r['owner_earnings']['value'] / 1e6,
-    'Net income': None if r['net_income']['value'] is None else r['net_income']['value'] / 1e6}
-    for r in result['rows']]).set_index('Fiscal year')
-st.line_chart(chart)
-st.caption('USD millions. Missing values remain gaps, not zeroes.')
-st.subheader('Shared facts and source tags')
-st.dataframe(pd.DataFrame(panel.edgar.table(result)), hide_index=True)
-with st.expander('SEC filing provenance — dates, accessions and exact values'):
-    st.json(result['rows'])
-st.markdown(f'[SEC company facts]({result["source"]})')
-st.subheader('Panel checks')
-st.dataframe(pd.DataFrame(panel.panel_table(result)), hide_index=True)
-st.download_button('Download panel data', json.dumps(result, indent=2), file_name=ticker + '-panel.json')
-if threshold != panel.wood_threshold():
-    st.warning('Probe setting active: the checks use your temporary threshold. Saved memos reflect the saved skill setting; rerun the skill to revise a verdict.')
-columns = st.columns(3)
-all_flags = {}
-for investor, column in zip(panel.INVESTORS, columns):
-    with column:
-        st.subheader(investor)
-        path = panel.memo_path(ticker, investor)
-        saved = path.read_text() if path.exists() else 'Memo not written. Ask Codex to use this investor’s skill on the printed output.'
-        memo = st.text_area('Memo — editable number probe', saved, height=320, key=ticker + '_' + panel.SLUGS[investor])
-        st.write('**Verdict:**', panel.verdict(memo))
-        st.markdown(memo)
-        flags = panel.unsupported_numbers(memo, result)
-        all_flags[investor] = flags
-        if flags:
-            st.error('Unprinted numbers: ' + ', '.join(flags))
-        elif path.exists():
-            st.success('No unprinted numbers detected.')
-        if st.button('Save memo', key='save_' + investor):
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(memo)
-            st.success('Saved.')
-        st.download_button('Download memo', memo, file_name=ticker + '-' + panel.SLUGS[investor] + '.md', key='download_' + investor)
-if any(all_flags.values()):
-    st.error('Panel number check: ' + '; '.join(name + ': ' + ', '.join(flags) for name, flags in all_flags.items() if flags))
-else:
-    st.success('Panel number check: no unprinted numbers detected across the three memo editors.')
-st.caption('Numeric matching does not prove the surrounding claim, financial judgment, or stock valuation.')
-st.subheader('Your checkout notes')
-notes_path = ROOT / 'checkout-notes.json'
-notes = json.loads(notes_path.read_text()) if notes_path.exists() else {}
-fields = [('threshold_reason', 'Threshold you keep and why'), ('bull', 'Your company — bull case, two sentences'),
-          ('bear', 'Partner bear case, two sentences; record the role swap too'),
-          ('decision', 'Would you let this panel screen Project 2 companies? Name the condition.'),
-          ('reflection', 'Where the panel agrees/splits; what the threshold probe taught you')]
-for key, label in fields:
-    notes[key] = st.text_area(label, notes.get(key, ''), key='notes_' + key)
-if st.button('Save checkout notes'):
-    notes_path.write_text(json.dumps(notes, indent=2))
-    st.success('Notes saved to checkout-notes.json.')
-st.download_button('Download checkout notes', json.dumps(notes, indent=2), file_name='checkout-notes.json')
+    r=run(recent,costs,reserve,vt if override else None,objective)
+    st.caption(f"Frozen prices: September 2021–September 2026, retrieved October 22, 2026. Active window: {r['window']}. Historical arithmetic estimates are not forecasts.")
+    rows=[]
+    for name,x in r['portfolios'].items():
+        rows.append({'Portfolio':name,**{t:f'{w:.0%}' for t,w in zip(['BIL','IEF','LQD','VT'],x['weights'])},'Net estimate':f"{x['net_return']:.2%}",'Volatility':f"{x['volatility']:.2%}",'Historical max drawdown':f"{x['historical_max_drawdown']:.2%}",'Numerical screen':x['verdict'],'Full mandate':x['live_mandate_verdict'],'Failed rules':', '.join(k for k,v in x['rules'].items() if not v) or 'None'})
+    st.dataframe(pd.DataFrame(rows),hide_index=True,use_container_width=True)
+    if not r['feasible']: st.error('STOP: no feasible constrained portfolio on the five-percentage-point grid. Do not lower the objective silently.')
+    st.subheader('Decision and monitoring')
+    st.write(report()['candidate_range'])
+    st.write('Monitor net target under VT 6.5–7.5%, both covariance windows, costs, BIL reserve, source revisions and vintage availability. Suspend advancement on a failed rule or spending shortfall. Escalate at 8% drawdown (proposed early warning); stop the risk process and seek committee review at 10%. These triggers cannot guarantee execution before the limit. Grid search is not a continuous optimum; volatility is not a maximum-loss guarantee.')
+    with st.expander('Point-in-time signal: TB3MS'):
+        st.write('Admitted as rate-environment context only; it does not mechanically change weights or replace BIL returns. Lab 17 recorded August 2026 at 3.72% as known September 30, 2026; September 3.94% was unavailable then. These are preserved lab findings, not a newly retrieved live vintage.')
+        st.markdown('[FRED source](https://fred.stlouisfed.org/series/TB3MS). Full timing, units and student checks: Lab17/lab17-data-card.md. Stop using the signal if release timing cannot be established.')
+    with st.expander('Inspect estimates'):
+        st.json(r['estimates'])
+    st.download_button('Download current run',json.dumps(r,indent=2),'committee-run.json','application/json')
+except (ValueError,OSError) as error:
+    st.error(f'STOP: {error}')
