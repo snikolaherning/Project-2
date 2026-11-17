@@ -1,3 +1,5 @@
+> Historical Lab 19 company-panel checkout. This is not the Project 2 portfolio decision. Start with README.md and docs/decision-memo.md.
+
 # Lab 19 checkout — Stefan
 
 Partner: Anika. Instructor substitution: Cathie Wood replaces Graham with the same assigned checks. Student confirmed opener discussion and Lab 18 COST loading.

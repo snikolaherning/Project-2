@@ -1,0 +1,172 @@
+{
+  "window": "36 months",
+  "cost_bps": 25,
+  "reserve_minimum": 0.2,
+  "objective": 0.05,
+  "estimates": {
+    "names": [
+      "BIL",
+      "IEF",
+      "LQD",
+      "VT"
+    ],
+    "returns": [
+      0.04365973352476608,
+      0.030695545969047888,
+      0.04842829420721417,
+      0.20247156503936775
+    ],
+    "volatilities": [
+      0.002134856039085903,
+      0.06660158542656203,
+      0.07822456842077337,
+      0.1170890916562236
+    ],
+    "correlations": [
+      [
+        1.0,
+        0.16748182440092388,
+        0.23524566823308252,
+        0.14745901537699388
+      ],
+      [
+        0.1674818244009239,
+        1.0,
+        0.935586724459492,
+        0.5505374214152198
+      ],
+      [
+        0.23524566823308252,
+        0.9355867244594919,
+        0.9999999999999998,
+        0.6876216009321818
+      ],
+      [
+        0.1474590153769939,
+        0.5505374214152198,
+        0.6876216009321819,
+        1.0
+      ]
+    ],
+    "price_rows": 61,
+    "return_months": 36,
+    "start": "2023-09-30",
+    "end": "2026-09-30",
+    "label": "Historical arithmetic estimate, not a forecast"
+  },
+  "portfolios": {
+    "Equal weight": {
+      "historical_max_drawdown": 0.026020571269695147,
+      "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+      "weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "gross_return": 0.08131378468509898,
+      "net_return": 0.07881378468509898,
+      "volatility": 0.058843274702544426,
+      "rules": {
+        "Fully invested": true,
+        "Long only": true,
+        "BIL reserve floor": true,
+        "Net expected return target": true,
+        "Historical monthly drawdown <= 10%": true
+      },
+      "verdict": "PASS"
+    },
+    "Inverse volatility": {
+      "historical_max_drawdown": 0.0,
+      "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+      "weights": [
+        0.9280068466296624,
+        0.02974645435467778,
+        0.02532658295004772,
+        0.016920116065612133
+      ],
+      "gross_return": 0.04608198088089028,
+      "net_return": 0.04358198088089028,
+      "volatility": 0.0060895696615340935,
+      "rules": {
+        "Fully invested": true,
+        "Long only": true,
+        "BIL reserve floor": true,
+        "Net expected return target": false,
+        "Historical monthly drawdown <= 10%": true
+      },
+      "verdict": "FAIL"
+    },
+    "60/40 benchmark": {
+      "historical_max_drawdown": 0.04581756977684592,
+      "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+      "weights": [
+        0,
+        0,
+        0.4,
+        0.6
+      ],
+      "gross_return": 0.1408542567065063,
+      "net_return": 0.1383542567065063,
+      "volatility": 0.09453933707431919,
+      "rules": {
+        "Fully invested": true,
+        "Long only": true,
+        "BIL reserve floor": false,
+        "Net expected return target": true,
+        "Historical monthly drawdown <= 10%": true
+      },
+      "verdict": "FAIL"
+    },
+    "Fixed pilot candidate": {
+      "historical_max_drawdown": 0.013598974457534552,
+      "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+      "weights": [
+        0.75,
+        0,
+        0,
+        0.25
+      ],
+      "gross_return": 0.0833626914034165,
+      "net_return": 0.0808626914034165,
+      "volatility": 0.029550840091874964,
+      "rules": {
+        "Fully invested": true,
+        "Long only": true,
+        "BIL reserve floor": true,
+        "Net expected return target": true,
+        "Historical monthly drawdown <= 10%": true
+      },
+      "verdict": "PASS"
+    },
+    "Constrained portfolio": {
+      "historical_max_drawdown": 0.0038378027212851995,
+      "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+      "weights": [
+        0.9,
+        0.0,
+        0.0,
+        0.1
+      ],
+      "gross_return": 0.05954091667622625,
+      "net_return": 0.057040916676226246,
+      "volatility": 0.012141871105130222,
+      "rules": {
+        "Fully invested": true,
+        "Long only": true,
+        "BIL reserve floor": true,
+        "Net expected return target": true,
+        "Historical monthly drawdown <= 10%": true
+      },
+      "verdict": "PASS"
+    }
+  },
+  "feasible": true,
+  "spending_policy": {
+    "annual_withdrawal_cap": 0.05,
+    "timing": "late August or September",
+    "protected_next_12_month_budget": true,
+    "drawdown_limit": 0.1,
+    "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+  }
+}

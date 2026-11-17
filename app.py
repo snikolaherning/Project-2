@@ -7,7 +7,7 @@ st.set_page_config(page_title='Club reserve | Investment committee',layout='wide
 st.title('University club reserve — committee workspace')
 st.caption('Codex assisted with code, analysis checks and documentation. The analysis and decision belong to the student; education, not investment advice.')
 st.warning('Research prototype: PILOT in simulation only. Live allocation: 0% pending protected spending implementation, loss-cap evidence and validation.')
-st.write('Five-year horizon · BIL / IEF / LQD / VT · 5% annual nominal net expected-return target · minimum 20% BIL · long only · no leverage. Benchmark: 60% VT / 40% LQD.')
+st.write('Five-year horizon · BIL / IEF / LQD / VT · long only · no leverage. Benchmark: 60% VT / 40% LQD.')
 st.info('Mandate: maximum 10% peak-to-trough investment drawdown; fully protect the next 12 months of spending; one late-August/September withdrawal up to 5% of reserve. Historical monthly drawdown is a screen, not a guaranteed loss cap. Every current ETF portfolio FAILS full live mandate approval because the protected spending account and hard cap are not demonstrated.')
 st.caption('Book the approved annual dollar budget at the school-year decision date, capped at 5% of the reserve then; do not shrink that protected amount after losses. Treat withdrawals as external cash flows when measuring drawdown. BIL is not assumed to guarantee principal. Proposed separate cash/maturity-matched Treasury spending sleeve requires implementation beyond this ETF prototype.')
 with st.sidebar:
@@ -21,11 +21,19 @@ with st.sidebar:
     st.caption('Cost is an annual scenario haircut, not an estimated turnover fee. Fund expenses are already reflected in historical adjusted returns; avoid treating this as an additional fund expense.')
 try:
     r=run(recent,costs,reserve,vt if override else None,objective)
+    st.write(f"Active mandate: {objective:.1%} annual nominal net expected-return target; at least {reserve:.0%} BIL.")
     st.caption(f"Frozen prices: September 2021–September 2026, retrieved October 22, 2026. Active window: {r['window']}. Historical arithmetic estimates are not forecasts.")
     rows=[]
     for name,x in r['portfolios'].items():
         rows.append({'Portfolio':name,**{t:f'{w:.0%}' for t,w in zip(['BIL','IEF','LQD','VT'],x['weights'])},'Net estimate':f"{x['net_return']:.2%}",'Volatility':f"{x['volatility']:.2%}",'Historical max drawdown':f"{x['historical_max_drawdown']:.2%}",'Numerical screen':x['verdict'],'Full mandate':x['live_mandate_verdict'],'Failed rules':', '.join(k for k,v in x['rules'].items() if not v) or 'None'})
-    st.dataframe(pd.DataFrame(rows),hide_index=True,use_container_width=True)
+    frame=pd.DataFrame(rows)
+    st.subheader('Mandate verdicts')
+    st.dataframe(frame[['Portfolio','Net estimate','Historical max drawdown','Numerical screen','Failed rules']],hide_index=True,width='stretch')
+    for item in rows:
+        st.caption(f"{item['Portfolio']}: {item['Numerical screen']}; failed rules: {item['Failed rules']}.")
+    st.error('Full live mandate: FAIL for every portfolio — protected spending account is not implemented and the hard 10% future loss cap is unproven.')
+    st.subheader('Allocation and risk')
+    st.dataframe(frame[['Portfolio','BIL','IEF','LQD','VT','Volatility']],hide_index=True,width='stretch')
     if not r['feasible']: st.error('STOP: no feasible constrained portfolio on the five-percentage-point grid. Do not lower the objective silently.')
     st.subheader('Decision and monitoring')
     st.write(report()['candidate_range'])

@@ -7,7 +7,9 @@ The analysis and final decision are mine; education, not investment advice.
 
 Run `python committee.py` for all stress outputs. `results/committee-report.json` contains full precision, inputs, all portfolio verdicts and both windows. Scenarios cover historical windows, VT return assumptions, implementation drag and reserve constraints. These precomputed scenarios are AI-assisted development checks, not the human locked experiment.
 
-Four engine tests passed on November 17: known-answer covariance, arithmetic costs, rule failures/infeasibility, and grid constraints. Python compilation passed. A Streamlit AppTest was added, but execution is pending because importing the previous lab environment stalled; rendered UI and fresh dependency installation are not yet verified. Data snapshot provenance and known-answer history are preserved in `Lab15 2/lab15-stability.md`, its source-evidence JSON, and `Lab17/lab17-data-card.md`. Historical student attestations are not new independent verification. No untouched holdout or live trading result is claimed.
+Nine tests passed November 17 in a fresh clone of published branch commit `2ce4d001b68ccae82ccd9c5d525e56027247fe70` with the fixes documented in [developer cold run](developer-cold-run.md). Eight cover portfolio calculations/rules; one Streamlit AppTest exercises the default table, both window and VT controls, objective display and infeasibility. The documented launcher installed fresh dependencies, initially failed at Streamlit onboarding, then launched successfully after the recorded fix. Browser inspection and the health endpoint confirmed the app. These are AI-executed developer checks, not an independent partner run.
+
+Data snapshot provenance and known-answer history remain in `Lab15 2/lab15-stability.md`, its source-evidence JSON, and `Lab17/lab17-data-card.md`. Historical student attestations are not new independent verification. No untouched holdout or live trading result is claimed.
 
 ## Locked Changed-Input Record — existing Lab 20 experiment
 
@@ -19,9 +21,9 @@ Allocation and directional predictions matched; expected return was higher than 
 
 GitHub history shows the prediction file first appearing in 1ac1db6 and updated in cbe18ca. Student reports pushing the prediction before the original run. Execution timestamps are not embedded in the evidence, so independent chronological verification remains a limitation. No rerun is presented as an original locked experiment.
 
-## Independent cold run — review recorded, successful retry pending
+## Independent cold run — two reviews, browser retry pending
 
-The updated Lab 20 record identifies Ross Dyson as the actual reviewer. Linda Li was an earlier partner reference and is not substituted for Ross's recorded activity. Ross found README routing to the investor panel, attempted no command, and did not record elapsed time. See [Lab 20 record](lab20-readiness.md). Code question and role swap are recorded there. A clean independent execution/retry is still needed; developer tests do not replace it.
+Ross Dyson's Lab 20 review found incorrect README routing; no execution or elapsed time was recorded. Linda Li subsequently reviewed commit 2ce4d00 independently as reported by Stefan. Her Linux sandbox blocked PyPI, so the app could not install or render. Her supplied 60/36-month engine results and repository findings are preserved in [Linda's review](independent-review-linda.md); Codex's numeric comparison is in results/reviewer-evidence-check.json. She understood the simulation-only decision but identified the missing 85/15 row and legacy mandate confusion. Fixes are prepared locally, not independently retried. Do not count code inspection or engine output as browser use.
 
 ## Source integrity check
 

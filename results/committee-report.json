@@ -145,6 +145,27 @@
           },
           "verdict": "PASS"
         },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.038372172113106506,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.04839416046269493,
+          "net_return": 0.04589416046269493,
+          "volatility": 0.02365418505947514,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
         "Constrained portfolio": {
           "historical_max_drawdown": 0.05216646094172406,
           "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
@@ -308,6 +329,27 @@
           "gross_return": 0.0833626914034165,
           "net_return": 0.0808626914034165,
           "volatility": 0.029550840091874964,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": true,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "PASS"
+        },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.007091526633368317,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.06748150825195633,
+          "net_return": 0.06498150825195632,
+          "volatility": 0.01792104745541356,
           "rules": {
             "Fully invested": true,
             "Long only": true,
@@ -489,6 +531,27 @@
           },
           "verdict": "FAIL"
         },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.007091526633368317,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.04761077349605117,
+          "net_return": 0.045110773496051165,
+          "volatility": 0.01792104745541356,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
         "Constrained portfolio": {
           "historical_max_drawdown": 0.020106422281700564,
           "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
@@ -652,6 +715,27 @@
           "gross_return": 0.04899480014357456,
           "net_return": 0.04649480014357456,
           "volatility": 0.029550840091874964,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.007091526633368317,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.04686077349605117,
+          "net_return": 0.044360773496051165,
+          "volatility": 0.01792104745541356,
           "rules": {
             "Fully invested": true,
             "Long only": true,
@@ -833,6 +917,27 @@
           },
           "verdict": "FAIL"
         },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.007716526633368304,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.04761077349605117,
+          "net_return": 0.037610773496051166,
+          "volatility": 0.01792104745541356,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
         "Constrained portfolio": {
           "historical_max_drawdown": 0.040253765754199256,
           "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
@@ -996,6 +1101,27 @@
           "gross_return": 0.05024480014357456,
           "net_return": 0.04774480014357456,
           "volatility": 0.029550840091874964,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": false,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.007091526633368317,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.04761077349605117,
+          "net_return": 0.045110773496051165,
+          "volatility": 0.01792104745541356,
           "rules": {
             "Fully invested": true,
             "Long only": true,

@@ -9,18 +9,33 @@ Research prototype. Proposed recommendation: **pilot in simulation only; 0% live
 
 One-command setup and launch from the repository root: `python3 run_portfolio.py` (Windows: `py run_portfolio.py`). This installs dependencies and launches the current committee app. The earlier Lab 20 gross-cost-free app remains in portfolio-tool for evidence; its numbers differ from the current net-cost screen.
 
-Python 3.10+; no API key or network needed after dependency installation. From the repository root:
+Python 3.9+ (tested on Python 3.9.6); no API key or network needed after dependency installation. From the repository root:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python -m streamlit run app.py
+python -m streamlit run app.py --server.headless=true --browser.gatherUsageStats=false
 ```
 
 Open the local URL printed by Streamlit. Change a sidebar control and read the rule verdict and failed-rule column. Download the current JSON. The primary app uses frozen data; the separate historical company panel is available with `python -m streamlit run company_panel.py` and is not the portfolio decision engine.
 
-Recreate visible output: `python committee.py`. Validate: `python -m unittest discover -s tests -v`.
+Generate a comparison report: `python committee.py` writes ignored `work/committee-report.json`, leaving frozen submission evidence unchanged. Intentionally refresh the visible snapshot only with `python committee.py --output results/committee-report.json`. Validate: `python -m unittest discover -s tests -v`.
+
+## Which files matter
+
+| Purpose | Current file |
+|---|---|
+| Start app | run_portfolio.py |
+| Committee UI and club rules | app.py and committee.py |
+| Decision and validation | docs/decision-memo.md and docs/validation-and-ai-use.md |
+| Frozen visible output | results/committee-report.json |
+| Original locked Lab 20 experiment | lab20-changed-input.md and evidence/before-5pct.json / after-4_5pct.json |
+| Independent review | docs/independent-review-linda.md |
+
+`mandate.py` is the legacy Meridian classroom example, not the club's mandate. CHECKOUT.md, company_panel.py, scripts/, memos/ and older lab folders preserve historical exercises. portfolio-tool/ preserves the original Lab 20 app; it is not the current launch path.
+
+Initial setup requires internet access to PyPI. Once installed, the committee app uses bundled data without network access. A sandbox blocking PyPI cannot complete a fresh app cold run. In that case, record the failure; engine-only checks are available with `python3 -m unittest discover -s tests -p test_committee.py -v` and do not establish browser usability.
 
 ## Mandate and scope
 

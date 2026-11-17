@@ -1,3 +1,4 @@
+"""LEGACY MERIDIAN LAB CHECKER — not the club mandate. Current club rules: committee.py and docs/decision-memo.md."""
 """Meridian's holdings-only mandate checker. Run: python3 mandate.py"""
 from collections import defaultdict
 
@@ -63,6 +64,7 @@ def check(weights):
 
 
 def main():
+    print("LEGACY MERIDIAN LAB: not the current club mandate; use committee.py and app.py.")
     print(f'Reserve minimum: {reserve_minimum():.1f}%')
     for name, weights in CANDIDATES.items():
         print(f'\nCandidate {name}')

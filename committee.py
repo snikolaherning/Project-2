@@ -59,8 +59,7 @@ def run(recent=False, cost_bps=25, reserve=.20, vt_return=None, objective=.05):
     if vt_return is not None:
         estimates['returns'][-1]=vt_return
     mixes={'Equal weight':[.25]*4,'Inverse volatility':p.inverse_volatility_weights(estimates['volatilities']),
-           '60/40 benchmark':[0,0,.4,.6],'Fixed pilot candidate':[.75,0,0,.25]}
-    best=p.search(estimates['returns'],estimates['volatilities'],estimates['correlations'],objective+cost_bps/10000,reserve,(0,))
+           '60/40 benchmark':[0,0,.4,.6],'Fixed pilot candidate':[.75,0,0,.25],'Student pilot 85/15':[.85,0,0,.15]}
     # Apply observed drawdown constraint during selection, not only after choosing.
     feasible=[]
     for weights in p.grid_weights(4):
@@ -90,6 +89,11 @@ def report():
             'scenarios':scenarios}
 
 if __name__=='__main__':
-    destination=ROOT/'results'/'committee-report.json'
+    import argparse
+    parser=argparse.ArgumentParser(description='Write a reproducible developer report without changing frozen submission evidence.')
+    parser.add_argument('--output',type=Path,default=ROOT/'work'/'committee-report.json',help='Output path; defaults to ignored work/committee-report.json. Use --output results/committee-report.json only when intentionally refreshing the frozen snapshot.')
+    args=parser.parse_args()
+    destination=args.output
+    destination.parent.mkdir(parents=True,exist_ok=True)
     destination.write_text(json.dumps(report(),indent=2)+'\n')
-    print(destination)
+    print(destination.resolve())
