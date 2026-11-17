@@ -2,12 +2,34 @@
 from pathlib import Path
 import json
 import csv
+import hashlib
 import portfolio as p
 ROOT = Path(__file__).resolve().parent
 PRICES = ROOT / 'Lab15 2' / 'prices.csv'
 
 DRAWDOWN_LIMIT = .10
 SPENDING_RATE = .05
+
+def build_fingerprint():
+    digest=hashlib.sha256()
+    for name in ['app.py','committee.py','portfolio.py','Lab15 2/prices.csv']:
+        digest.update(name.encode())
+        digest.update((ROOT/name).read_bytes())
+    return digest.hexdigest()
+
+def decision_for(result):
+    pilot=result['portfolios']['Student pilot 85/15']
+    failed=[name for name,passed in pilot['rules'].items() if not passed]
+    if not result['feasible']:
+        action='STOP this scenario: no constrained grid allocation passes the numerical screens.'
+    elif failed:
+        action='REJECT 85/15 under these inputs; simulation research only. Failed screens: '+', '.join(failed)+'.'
+    else:
+        action='PILOT 85/15 in simulation only: it passes the current numerical screens.'
+    return dict(action=action,live_allocation=0.0,
+                live_reason='Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.',
+                research_range='10–20% VT / 80–90% BIL is a research envelope, not a claim every mix passes.')
+
 
 def drawdown_path(returns):
     """Unitized investment NAV: external spending is not an investment loss."""
@@ -71,7 +93,7 @@ def run(recent=False, cost_bps=25, reserve=.20, vt_return=None, objective=.05):
     best=min(feasible,key=lambda w:p.portfolio_volatility(w,covariance)) if feasible else None
     if best is not None:
         mixes['Constrained portfolio']=list(best)
-    return dict(window='36 months' if recent else '60 months',cost_bps=cost_bps,reserve_minimum=reserve,
+    return dict(build_sha256=build_fingerprint(),window='36 months' if recent else '60 months',cost_bps=cost_bps,reserve_minimum=reserve,
                 objective=objective,estimates=estimates,portfolios={name:evaluate(w,estimates,cost_bps,objective,reserve,recent) for name,w in mixes.items()},
                 feasible=best is not None, spending_policy={'annual_withdrawal_cap':SPENDING_RATE,'timing':'late August or September','protected_next_12_month_budget':True,'drawdown_limit':DRAWDOWN_LIMIT,'drawdown_basis':'cash-flow-adjusted NAV; monthly historical observations only'})
 

@@ -40,3 +40,7 @@ Sources: [TreasuryDirect: bills pay face value at maturity](https://www.treasury
 ## Updated student decision from Lab 20
 
 The updated repository records the student choosing simulation-only pilot of 85/15 rather than adoption. The original gross-return comparison and reflection are preserved in docs/lab20-decision-memo.md. This committee build adds 25 basis points of annual drag and a historical drawdown screen; distinguish those results from the original experiment. Passing return hurdles alone does not resolve the full mandate.
+
+## Control-dependent interpretation
+
+The 10–20% VT research range is not a promise of numerical feasibility. The app now rejects 85/15 under failing inputs, permits simulation-only pilot when its numerical screens pass, and stops infeasible scenarios. These changes do not override the live mandate failure or authorize capital.

@@ -22,6 +22,12 @@ Open the local URL printed by Streamlit. Change a sidebar control and read the r
 
 Generate a comparison report: `python committee.py` writes ignored `work/committee-report.json`, leaving frozen submission evidence unchanged. Intentionally refresh the visible snapshot only with `python committee.py --output results/committee-report.json`. Validate: `python -m unittest discover -s tests -v`.
 
+## Verify the copy you launched
+
+If port 8515 is occupied, run `python3 run_portfolio.py --port 8516` (Windows: `py run_portfolio.py --port 8516`). Open the exact new URL printed by this command. Do not test the old server and call it a fresh-install result. The launcher and app display the same build fingerprint; compare them, and retain the complete build_sha256 in the downloaded JSON. A code fingerprint identifies file contents, not an independently verified Git commit.
+
+The recommendation panel responds to current controls: reject 85/15 when it fails numerical rules, permit simulation-only pilot when it passes, and stop an infeasible scenario. Live allocation stays 0% because full mandate protection is unproven; a numerical pass never silently authorizes adoption.
+
 ## Which files matter
 
 | Purpose | Current file |

@@ -2,9 +2,10 @@
 import json
 import streamlit as st
 import pandas as pd
-from committee import run, report
+from committee import run, decision_for, build_fingerprint
 st.set_page_config(page_title='Club reserve | Investment committee',layout='wide')
 st.title('University club reserve — committee workspace')
+st.caption(f"Build fingerprint: {build_fingerprint()[:16]} — compare with the launcher and downloaded JSON.")
 st.caption('Codex assisted with code, analysis checks and documentation. The analysis and decision belong to the student; education, not investment advice.')
 st.warning('Research prototype: PILOT in simulation only. Live allocation: 0% pending protected spending implementation, loss-cap evidence and validation.')
 st.write('Five-year horizon · BIL / IEF / LQD / VT · long only · no leverage. Benchmark: 60% VT / 40% LQD.')
@@ -36,7 +37,11 @@ try:
     st.dataframe(frame[['Portfolio','BIL','IEF','LQD','VT','Volatility']],hide_index=True,width='stretch')
     if not r['feasible']: st.error('STOP: no feasible constrained portfolio on the five-percentage-point grid. Do not lower the objective silently.')
     st.subheader('Decision and monitoring')
-    st.write(report()['candidate_range'])
+    decision=decision_for(r)
+    st.write(decision['action'])
+    st.write(decision['live_reason'])
+    st.caption(decision['research_range'])
+    r['decision']=decision
     st.write('Monitor net target under VT 6.5–7.5%, both covariance windows, costs, BIL reserve, source revisions and vintage availability. Suspend advancement on a failed rule or spending shortfall. Escalate at 8% drawdown (proposed early warning); stop the risk process and seek committee review at 10%. These triggers cannot guarantee execution before the limit. Grid search is not a continuous optimum; volatility is not a maximum-loss guarantee.')
     with st.expander('Point-in-time signal: TB3MS'):
         st.write('Admitted as rate-environment context only; it does not mechanically change weights or replace BIL returns. Lab 17 recorded August 2026 at 3.72% as known September 30, 2026; September 3.94% was unavailable then. These are preserved lab findings, not a newly retrieved live vintage.')

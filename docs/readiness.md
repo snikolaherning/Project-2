@@ -17,3 +17,5 @@ Still required before submission:
 Deadline supplied by student: Monday November 23, 2026, 11:59 p.m.; verify Brightspace timezone.
 
 Linda Li independently reviewed published commit 2ce4d00; engine JSON preserved and checked. App install failed because her environment blocks PyPI. Local fixes address her navigation and output findings; publish and obtain a successful browser retry. See independent-review-linda.md.
+
+Follow-up Linda attempt: screenshots and 36-month JSON support browser control interaction; fresh ZIP server attribution remains unresolved after port collision. New --port and matching fingerprint enable a short targeted retry. Static decision-panel issue fixed locally.

@@ -5,6 +5,7 @@
   "stop": "Stop live allocation if any mandate test fails, data timing is unverified, protected spending is underfunded, or drawdown reaches 10%. A hard 10% maximum loss is not guaranteed.",
   "scenarios": {
     "historical_60": {
+      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
       "window": "60 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -198,6 +199,7 @@
       }
     },
     "historical_36": {
+      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -391,6 +393,7 @@
       }
     },
     "vt_7_recent": {
+      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -584,6 +587,7 @@
       }
     },
     "vt_6_5_recent": {
+      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -777,6 +781,7 @@
       }
     },
     "cost_100bps": {
+      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
       "window": "36 months",
       "cost_bps": 100,
       "reserve_minimum": 0.2,
@@ -970,6 +975,7 @@
       }
     },
     "reserve_90": {
+      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.9,

@@ -39,3 +39,15 @@ Linda could find verdicts and failed rules in code, README and memo, but not on 
 ## Retry still required
 
 After publishing fixes, ask an independent reviewer with Python and PyPI access (or permitted installed dependencies) to follow the README in a clean folder, launch the browser app, change a control, read the resulting verdict, and record command, first failure or none, elapsed time, result location, tested commit and help received. This pending browser retry is separate from Ross Dyson's earlier Lab 20 navigation review and Linda's supplied engine review.
+
+## Follow-up browser attempt — supplied November 17
+
+Linda reports testing a ZIP labeled branch project2-committee commit 6382e54. First attempt: Linux sandbox, Python 3.10.12, PyPI proxy returned 403; no app launch. Second: macOS Apple Silicon, Python 3.9 (probably 3.9.6, unconfirmed patch level). Command: python3 run_portfolio.py. Packages installed but launch failed because port 8515 was already occupied. She opened the existing server, so the browser session cannot be attributed to the fresh ZIP or commit. Approximately 17 minutes elapsed, 4:38–4:55 p.m. Eastern.
+
+Evidence: [60-month screenshot](../evidence/linda-browser-retry-2026-11-17/app-running-60mo-baseline.jpg), [36-month screenshot](../evidence/linda-browser-retry-2026-11-17/app-running-36mo.jpg), [downloaded 36-month JSON](../evidence/linda-browser-retry-2026-11-17/committee-run.json). The first screenshot shows the default window and inputs, not the allocation table; the second shows the selected recent window and verdicts. Numerical claims for both windows remain supported by the earlier JSON files. The supplied 36-month JSON matches all existing engine fields within relative 1e-10 / absolute 1e-12; see results/linda-browser-retry-check.json. This match does not prove server identity.
+
+Reported interactions: constrained allocation 80% BIL / 20% VT → 90% BIL / 10% VT; numerical PASS → PASS; net 5.00% → 5.70%. Equal weight FAIL → PASS; student 85/15 FAIL → PASS. Full live mandate FAIL throughout. Linda understood simulation-only recommendation and failed rules. She identified static recommendation text as a remaining gap.
+
+Assistance disclosure: Stefan asked Codex how to proceed from the editor; Codex instructed clicking Run and opening the local URL. Record this as launch assistance relayed during the attempt, not “no help.” No claim of an unassisted successful fresh launch is made.
+
+Resolution prepared: launcher accepts --port 8516 to avoid the existing server without terminating unknown processes. Launcher, UI and downloaded JSON expose a code fingerprint to identify the copy. Decision panel now responds to numerical failures/pass/infeasibility while retaining 0% live allocation under the unproven full mandate. These changes require publication and a brief fresh-copy launch verification. Preserve the failed port attempt as useful evidence rather than rewriting it as success.

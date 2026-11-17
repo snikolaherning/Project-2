@@ -23,7 +23,7 @@ GitHub history shows the prediction file first appearing in 1ac1db6 and updated 
 
 ## Independent cold run — two reviews, browser retry pending
 
-Ross Dyson's Lab 20 review found incorrect README routing; no execution or elapsed time was recorded. Linda Li subsequently reviewed commit 2ce4d00 independently as reported by Stefan. Her Linux sandbox blocked PyPI, so the app could not install or render. Her supplied 60/36-month engine results and repository findings are preserved in [Linda's review](independent-review-linda.md); Codex's numeric comparison is in results/reviewer-evidence-check.json. She understood the simulation-only decision but identified the missing 85/15 row and legacy mandate confusion. Fixes are prepared locally, not independently retried. Do not count code inspection or engine output as browser use.
+Ross Dyson's Lab 20 review found incorrect README routing; no execution or elapsed time was recorded. Linda Li subsequently reviewed commit 2ce4d00 independently as reported by Stefan. Her Linux sandbox blocked PyPI, so the app could not install or render. Her supplied 60/36-month engine results and repository findings are preserved in [Linda's review](independent-review-linda.md); Codex's numeric comparison is in results/reviewer-evidence-check.json. She understood the simulation-only decision but identified the missing 85/15 row and legacy mandate confusion. A follow-up attempt supplied browser screenshots and JSON; installation on the Mac succeeded but port 8515 was occupied, and the browser used an unidentified pre-existing server. This establishes browser interaction, not a clean launch of the fresh ZIP. See the follow-up section of Linda’s review. Fixes are prepared locally, not independently retried. Do not count code inspection or engine output as browser use.
 
 ## Source integrity check
 
@@ -55,3 +55,7 @@ Proposed monitoring: review cash-flow-adjusted drawdown each trading day; 8% is 
 
 Sources: [TreasuryDirect: bills pay face value at maturity](https://www.treasurydirect.gov/marketable-securities/treasury-bills/); [SEC: stop price is not a guaranteed execution price](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14). Nominal maturity cash flows do not guarantee a stable daily market value or an inflation-adjusted spending amount.
 
+
+## Browser-retry fixes
+
+Add alternate --port, display matching source fingerprints in launcher/app/JSON, and respond to numerical verdicts in the recommendation panel. At full-window default inputs 85/15 is rejected numerically; recent-window default inputs permit simulation-only pilot. Infeasibility stops the scenario. Full mandate failure and 0% live allocation remain unchanged. Independent new-copy launch attribution is still pending.

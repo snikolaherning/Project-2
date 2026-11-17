@@ -4,6 +4,16 @@ import os
 import subprocess
 import sys
 import venv
+import argparse
+from committee import build_fingerprint
+parser=argparse.ArgumentParser(description="Install and launch the club committee app.")
+parser.add_argument("--port",type=int,default=8515,help="Use another port for an independent fresh-copy check, e.g. 8516.")
+args=parser.parse_args()
+if not 1024 <= args.port <= 65535:
+    parser.error("port must be between 1024 and 65535")
+print(f"Launching folder: {Path(__file__).resolve().parent}",flush=True)
+print(f"Build fingerprint: {build_fingerprint()[:16]}",flush=True)
+print(f"Expected browser URL: http://localhost:{args.port}",flush=True)
 root=Path(__file__).resolve().parent
 env=root/'.venv'
 python=env/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
@@ -18,9 +28,9 @@ except (OSError,subprocess.CalledProcessError) as error:
     sys.exit(1)
 launch_env=dict(os.environ,STREAMLIT_SERVER_HEADLESS='true',STREAMLIT_BROWSER_GATHER_USAGE_STATS='false')
 try:
-    subprocess.check_call([str(python),'-m','streamlit','run',str(root/'app.py'),'--server.port','8515','--server.headless=true','--browser.gatherUsageStats=false'],cwd=str(root),env=launch_env)
+    subprocess.check_call([str(python),'-m','streamlit','run',str(root/'app.py'),'--server.port',str(args.port),'--server.headless=true','--browser.gatherUsageStats=false'],cwd=str(root),env=launch_env)
 except (OSError,subprocess.CalledProcessError):
-    print('App did not start or exited with an error. Record the message above; check whether port 8515 is already in use.',file=sys.stderr)
+    print(f'App did not start or exited with an error. If port {args.port} is occupied, rerun: python3 run_portfolio.py --port {args.port+1}. Do not treat the pre-existing server as this copy.',file=sys.stderr)
     sys.exit(1)
 except KeyboardInterrupt:
     pass
