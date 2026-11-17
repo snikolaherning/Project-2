@@ -1,0 +1,16 @@
+{
+  "60m": {
+    "sha256": "5eaec107a2ea67747ffa699751baf894941b4686add046a9639988c04820f892",
+    "numeric_values_checked": 71,
+    "comparison_scope": "All fields supplied, compared against local committee.run; local additional 85/15 portfolio is not required in old evidence",
+    "numeric_tolerance": "relative 1e-10, absolute 1e-12",
+    "differences": []
+  },
+  "36m": {
+    "sha256": "8cd303ebba7f8cd3b1d614206cdf6fa876a01f5ced4562df57c1927386fc0241",
+    "numeric_values_checked": 71,
+    "comparison_scope": "All fields supplied, compared against local committee.run; local additional 85/15 portfolio is not required in old evidence",
+    "numeric_tolerance": "relative 1e-10, absolute 1e-12",
+    "differences": []
+  }
+}
