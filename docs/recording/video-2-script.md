@@ -19,7 +19,7 @@ For each asset, monthly return is the price ratio minus one. Arithmetic mean tim
 
 [1:40 — portfolio.py: covariance_matrix and portfolio_volatility]
 
-The covariance table combines volatility and correlation. Portfolio variance sums all weighted covariance terms, including both off-diagonal directions, then volatility takes the square root. Averaging individual volatilities would ignore how the assets move together. The code validates symmetry and positive semidefiniteness.
+The covariance table combines volatility and correlation. Portfolio variance sums all weighted covariance terms, including both off-diagonal directions, then volatility takes the square root. Averaging individual volatilities would ignore how the assets move together. The code validates symmetry and positive semidefiniteness; the committee wrapper also refuses altered frozen input hashes.
 
 [2:15 — committee.py: run, evaluate, historical_drawdown]
 
@@ -33,6 +33,6 @@ The bounded driver panel labels fixed policies, enables BIL and VT overrides, an
 
 [3:45 — tests and validation document]
 
-Twenty developer tests passed: eight original engine checks, three UI/decision/reset checks, and nine risk/provenance/time-split checks. They cover known covariance and cost answers, source-price reconstruction, actual vintage availability, BIL sensitivity and break-even, crash and spending probes, reset and decision transitions. A future-price mutation confirms training-only selection in the retrospective split. Linda's successful fresh-copy retry is separate evidence, based on the reported matching fingerprints and screenshot.
+Twenty-one developer tests passed: eight original engine checks, three UI/decision/reset checks, and ten risk/provenance/time-split checks. They cover known covariance and cost answers, source-price reconstruction, actual vintage availability, BIL sensitivity and break-even, crash and spending probes, reset and decision transitions. A future-price mutation confirms training-only selection in the retrospective split. Linda's successful fresh-copy retry is separate evidence, based on the reported matching fingerprints and screenshot.
 
 There is no untouched holdout performance claim. A working app and passing arithmetic tests do not establish a profitable or adoptable process.

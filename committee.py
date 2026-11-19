@@ -11,6 +11,20 @@ PRICES = ROOT / 'Lab15 2' / 'prices.csv'
 DRAWDOWN_LIMIT = .10
 SPENDING_RATE = .05
 
+def verify_snapshot(price_path=None):
+    """Refuse accidental mutation of the frozen input; overrides belong in controls."""
+    folder=ROOT/'Lab15 2'
+    manifest=json.loads((folder/'source-evidence'/'downloads.json').read_text())
+    path=Path(price_path) if price_path is not None else PRICES
+    if hashlib.sha256(path.read_bytes()).hexdigest()!=manifest['csv_sha256']:
+        raise ValueError('STOP: frozen price CSV hash mismatch. Restore the verified snapshot; use scenario controls to change assumptions.')
+    for ticker,expected in manifest['raw_sha256'].items():
+        path=folder/'source-evidence'/f'{ticker}.json'
+        if hashlib.sha256(path.read_bytes()).hexdigest()!=expected:
+            raise ValueError(f'STOP: raw {ticker} source hash mismatch. Restore verified source evidence.')
+    return True
+
+
 def build_fingerprint():
     digest=hashlib.sha256()
     for name in ['app.py','committee.py','risk_review.py','portfolio.py','Lab15 2/prices.csv','data/signal/TB3MS-vintage-2026-09-30.csv','data/signal/TB3MS-vintage-2026-10-29.csv','data/assumption-sources.json']:
@@ -80,6 +94,7 @@ def run(recent=False, cost_bps=25, reserve=.20, vt_return=None, objective=.05, b
         raise ValueError('Inputs must be finite; missing estimates cannot become zero.')
     if not 0<=cost_bps<=1000 or not 0<=reserve<=1 or not 0<=objective<=1:
         raise ValueError('Costs, reserve and objective outside supported bounds.')
+    verify_snapshot()
     estimates=p.estimate_from_csv(PRICES,last_36=recent)
     if vt_return is not None:
         estimates['returns'][-1]=vt_return

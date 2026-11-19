@@ -65,7 +65,7 @@
       "return_screen": false
     }
   ],
-  "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+  "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
   "status": "Supplemental AI-assisted validation; not a new human locked experiment",
   "sensitivity_per_1pp": {
     "BIL_portfolio_return_pp": 0.85,

@@ -78,3 +78,12 @@ class DecisionRiskTests(unittest.TestCase):
             self.assertEqual(x['weights'],changed['results'][name]['weights'])
         self.assertEqual(original['training_return_months'],36)
         self.assertEqual(original['test_return_months'],24)
+
+    def test_corrupted_frozen_price_file_is_refused(self):
+        import tempfile
+        self.assertTrue(c.verify_snapshot())
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'prices.csv'
+            path.write_text(c.PRICES.read_text().replace('76.37165069580078','77.37165069580078',1))
+            with self.assertRaisesRegex(ValueError,'hash mismatch'):
+                c.verify_snapshot(path)

@@ -25,6 +25,7 @@ Branch links below are review links. After the final upload, replace branch refs
 | Executed supplemental risk output | https://github.com/snikolaherning/Project-2/blob/project2-committee/results/risk-review.json | Verify latest published file at final freeze |
 | Controls and defended bounds | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/controls-and-bounds.md | Verify latest published file at final freeze |
 | Raw vintage manifest | https://github.com/snikolaherning/Project-2/blob/project2-committee/data/signal/downloads.json | Verify latest published file at final freeze |
+| Committee pilot and decision gates | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/committee-pilot-plan.md | Verify latest published file at final freeze |
 | Video 1: Evolution and checked AI output | PENDING YouTube URL | Duration ≤3:00; actual timestamps and access confirmation pending |
 | Actual transcript 1 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-1.txt | Not yet recorded/uploaded; link will not work until created |
 | Video 2: Code walkthrough | PENDING YouTube URL | Duration ≤5:00; actual timestamps and access confirmation pending |

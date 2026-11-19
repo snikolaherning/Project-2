@@ -1,6 +1,6 @@
 # Final work checklist — November 17, 2026
 
-Completed: portfolio app with baselines, constrained search and explicit full-mandate failure; window/estimate/cost/constraint scenarios; 20 passing developer tests; matching ETF source hashes; locked Lab 20 record and disclosed timing limitations; Linda's successful fresh-copy retry (~14 minutes, matching fingerprint b982296fa6a67012), with historical failures and assistance retained. Written decision and validation now reconciled with current outputs.
+Completed: portfolio app with baselines, constrained search and explicit full-mandate failure; window/estimate/cost/constraint scenarios; 21 passing developer tests; matching ETF source hashes; locked Lab 20 record and disclosed timing limitations; Linda's successful fresh-copy retry (~14 minutes, matching fingerprint b982296fa6a67012), with historical failures and assistance retained. Written decision and validation now reconciled with current outputs.
 
 Before recording: upload the latest package, inspect the actual branch, run the matching app, and review the memo and scripts personally. Keep the current 5% net default distinct from the original 4.5% gross-target experiment. Do not claim the strategy is approved for live money.
 
@@ -15,6 +15,8 @@ Honest limitations remain: no guaranteed loss cap/protected account, no untouche
 
 ## November 19 improvements and freeze requirements
 
-Completed: bounded controls, locked-input explanation and reset; student-supplied BIL forward range and dated source bridge; fixed-weight return sensitivity/break-even; loss/spending failure probes; raw ALFRED snapshots with availability tests; raw ETF adjclose reconstruction; retrospective training-only selection check; 20 passing tests. New code fingerprint differs from Linda's November 17 tested build; her report is not relabeled as a test of this revision. Developer regression evidence accompanies changes. Verify the final published revision before recording; a short matching-build launch smoke check is enough rather than repeating all partner exercises.
+Completed: bounded controls, locked-input explanation and reset; student-supplied BIL forward range and dated source bridge; fixed-weight return sensitivity/break-even; loss/spending failure probes; raw ALFRED snapshots with availability tests; raw ETF adjclose reconstruction; retrospective training-only selection check; 21 passing tests. New code fingerprint differs from Linda's November 17 tested build; her report is not relabeled as a test of this revision. Developer regression evidence accompanies changes. Verify the final published revision before recording; a short matching-build launch smoke check is enough rather than repeating all partner exercises.
 
 Record every video as a screen recording with webcam on and clear audio, per professor's November 19 email supplied by Stefan. Review the revised scripts personally; do not read stage directions or call scripts transcripts. BIL rationale is student judgment supported by dated projections, not a guaranteed Fed forecast of ETF returns. Original AI-off experiment remains unchanged.
+
+Final content polish: runtime refusal of altered inputs and a finite proposed committee pilot with explicit authorization/stop/reconsideration gates. The pilot is not represented as executed. Recordings, actual transcripts, final upload/link freeze and instructor access remain pending.

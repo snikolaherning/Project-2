@@ -57,6 +57,7 @@ Historical inputs: monthly adjusted prices September 2021–September 2026, down
 - [Submission manifest](docs/submission-manifest.md)
 - [Remaining work](docs/readiness.md)
 - [Student assumptions and checked bridges](docs/student-decisions.md)
+- [Committee pilot and adoption gates](docs/committee-pilot-plan.md)
 - [Load-bearing risk challenge](docs/risk-challenge.md)
 - [Recording workflow](docs/recording/recording-checklist.md)
 - [Readable executed output](docs/output-snapshot.md)
@@ -82,3 +83,5 @@ Sources: [TreasuryDirect: bills pay face value at maturity](https://www.treasury
 Use Reset to base to restore the frozen 60-month historical case. Scenario controls are bounded and the sidebar explains what is editable or locked. Student BIL stress 2.75–3.25% / VT stress 6.5–7.5% is distinct from the historical base; the confirmed live allocation remains 0%. BIL is the largest sensitivity. See docs/student-decisions.md for dated source checks and docs/risk-challenge.md for fixed-candidate stress and retrospective time split.
 
 Generate supplemental checks: `python risk_review.py` (ignored work/risk-review.json). Intentionally refresh frozen evidence only with `python risk_review.py --output results/risk-review.json`. The raw ALFRED snapshots under data/signal/ make the point-in-time comparison runnable offline after package installation. The new fingerprint differs from Linda's November 17 evidence because the controls and risk checks changed; her historical successful run is retained, not relabeled as a test of later code.
+
+Frozen-input safety: the engine refuses a CSV/raw ETF hash mismatch, and the signal loader refuses an altered vintage. Restore the original files or deliberately create a documented new snapshot; use UI overrides for assumptions. A proposed four-review simulation protocol in docs/committee-pilot-plan.md does not imply any live authorization.

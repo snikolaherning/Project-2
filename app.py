@@ -6,7 +6,11 @@ from committee import run, decision_for, build_fingerprint
 from risk_review import fixed_sensitivity, bil_break_even, shock_result, signal_snapshot, format_percent
 st.set_page_config(page_title='Club reserve | Investment committee',layout='wide')
 st.title('University club reserve — committee workspace')
-st.caption(f"Build fingerprint: {build_fingerprint()[:16]} — compare with the launcher and downloaded JSON.")
+try:
+    st.caption(f"Build fingerprint: {build_fingerprint()[:16]} — compare with the launcher and downloaded JSON.")
+except (OSError,ValueError) as error:
+    st.error(f'STOP: required input/code file missing or invalid: {error}. Restore the complete verified project folder.')
+    st.stop()
 st.caption('Codex assisted with code, analysis checks and documentation. The analysis and decision belong to the student; education, not investment advice.')
 st.warning('Research prototype: PILOT in simulation only. Live allocation: 0% pending protected spending implementation, loss-cap evidence and validation.')
 st.write('Five-year horizon · BIL / IEF / LQD / VT · long only · no leverage. Benchmark: 60% VT / 40% LQD.')

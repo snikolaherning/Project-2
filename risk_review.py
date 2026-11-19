@@ -52,8 +52,13 @@ def shock_result(weights,asset_shocks,spending_budget=5):
 
 def signal_snapshot():
     records={}
+    manifest=json.loads((ROOT/'data'/'signal'/'downloads.json').read_text())
+    expected={row['decision_date']:row['sha256'] for row in manifest}
     for vintage in ['2026-09-30','2026-10-29']:
         path=ROOT/'data'/'signal'/f'TB3MS-vintage-{vintage}.csv'
+        actual=hashlib.sha256(path.read_bytes()).hexdigest()
+        if actual!=expected[vintage]:
+            raise ValueError(f'STOP: {vintage} ALFRED snapshot hash mismatch; restore the verified vintage.')
         with path.open() as handle:
             rows=list(csv.reader(handle))[1:]
         values=[(day,float(value)) for day,value in rows if value not in ['.','']]
@@ -115,6 +120,7 @@ def temporal_review(source=None,cost_bps=25,target=.05):
 
 def review_report():
     import committee
+    committee.verify_snapshot()
     student=[]
     for bil in [.0275,.03,.0325,.035]:
         for vt in [.065,.075]:

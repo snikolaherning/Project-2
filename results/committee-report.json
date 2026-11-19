@@ -5,7 +5,7 @@
   "stop": "Stop live allocation if any mandate test fails, data timing is unverified, protected spending is underfunded, or drawdown reaches 10%. A hard 10% maximum loss is not guaranteed.",
   "scenarios": {
     "historical_60": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "60 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -205,7 +205,7 @@
       }
     },
     "historical_36": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -405,7 +405,7 @@
       }
     },
     "vt_7_recent": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -605,7 +605,7 @@
       }
     },
     "vt_6_5_recent": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -805,7 +805,7 @@
       }
     },
     "cost_100bps": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "36 months",
       "cost_bps": 100,
       "reserve_minimum": 0.2,
@@ -1005,7 +1005,7 @@
       }
     },
     "reserve_90": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.9,
@@ -1184,7 +1184,7 @@
       }
     },
     "student_bil_3_vt_6_5_full": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "60 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -1363,7 +1363,7 @@
       }
     },
     "student_bil_2_75_vt_6_5_full": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "60 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -1542,7 +1542,7 @@
       }
     },
     "student_bil_3_25_vt_7_5_full": {
-      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "build_sha256": "0c2ea86602ea3b1b75e4ccd4d7c62dbdd3c66c02df4cf44fc04f672d2c2ab57c",
       "window": "60 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,

@@ -7,7 +7,7 @@ Preparation script, NOT a transcript. Record the screen with webcam on and clear
 Codex helped me implement the app, check calculations, and draft documentation.
 The analysis and decision are mine; this is education, not investment advice.
 
-I ask the committee to authorize a simulation-only pilot centered on 85% BIL and 15% VT. Allocate zero live capital to this process today. Explore ten to twenty percent VT and eighty to ninety percent BIL as a research range, not a guarantee that every allocation passes.
+I ask the committee to authorize a simulation-only pilot centered on 85% BIL and 15% VT. Allocate zero live capital to this process today. The proposed pilot has four weekly reviews and explicit stop and reconsideration gates; it has not already been completed. Explore ten to twenty percent VT and eighty to ninety percent BIL as a research range, not a guarantee that every allocation passes.
 
 [0:35 — mandate and baseline table]
 
