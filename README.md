@@ -3,7 +3,7 @@ The analysis and final decision are mine; education, not investment advice.
 
 # Project 2 — University club reserve
 
-Research prototype. Proposed recommendation: **pilot in simulation only; 0% live allocation** until the mandate and validation are complete. Student must review and adopt the final recommendation.
+Research prototype. Proposed recommendation: **pilot in simulation only; 0% live allocation** until the mandate and validation are complete. Stefan’s recorded decision is simulation-only; full live mandate approval remains rejected.
 
 ## Start
 
@@ -45,7 +45,7 @@ Initial setup requires internet access to PyPI. Once installed, the committee ap
 
 ## Mandate and scope
 
-University club reserve; five-year horizon; BIL/IEF/LQD/VT universe; 5% annual nominal expected-return target, modeled net of the explicit implementation drag; BIL minimum 20%; long only, fully invested. Benchmark 60% VT / 40% LQD. Minimize annualized sample volatility on a five-percentage-point grid. The net-of-cost target is a conservative Project 2 interpretation of the earlier gross lab target, requiring student approval. Risk and spending limits were supplied November 17; see the clarification below. No full mandate approval is claimed.
+University club reserve; five-year horizon; BIL/IEF/LQD/VT universe; 5% annual nominal expected-return target, modeled net of the explicit implementation drag; BIL minimum 20%; long only, fully invested. Benchmark 60% VT / 40% LQD. Minimize annualized sample volatility on a five-percentage-point grid. The net-of-cost target is a conservative Project 2 interpretation of the earlier gross lab target, disclosed as an illustrative conservative cost convention, not a measured fee. Risk and spending limits were supplied November 19; see the clarification below. No full mandate approval is claimed.
 
 Historical inputs: monthly adjusted prices September 2021–September 2026, downloaded October 22, 2026. A 60-return and a 36-return window are available. Expected returns use monthly arithmetic mean ×12; volatility uses sample SD ×sqrt(12). No backtested out-of-sample performance or guaranteed returns are claimed. See `Lab15 2/lab15-stability.md` and `source-evidence` there for lineage. TB3MS is a point-in-time context signal only, not an ETF return or trading rule; see `Lab17/lab17-data-card.md`.
 
@@ -56,6 +56,11 @@ Historical inputs: monthly adjusted prices September 2021–September 2026, down
 - [Validation and AI use](docs/validation-and-ai-use.md)
 - [Submission manifest](docs/submission-manifest.md)
 - [Remaining work](docs/readiness.md)
+- [Student assumptions and checked bridges](docs/student-decisions.md)
+- [Load-bearing risk challenge](docs/risk-challenge.md)
+- [Recording workflow](docs/recording/recording-checklist.md)
+- [Readable executed output](docs/output-snapshot.md)
+- [Point-in-time signal card](docs/signal-data-card.md)
 
 Earlier lab folders are retained for evidence. They contain historical instructions and status notes; this README defines the current app. Edition A/B are personal comparison materials, not required submission artifacts. The changed-input prediction must be written by the student with AI off and pushed before that specific experiment is run. Automated scenarios are not that record.
 
@@ -71,3 +76,9 @@ Proposed monitoring: review cash-flow-adjusted drawdown each trading day; 8% is 
 
 Sources: [TreasuryDirect: bills pay face value at maturity](https://www.treasurydirect.gov/marketable-securities/treasury-bills/); [SEC: stop price is not a guaranteed execution price](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14). Nominal maturity cash flows do not guarantee a stable daily market value or an inflation-adjusted spending amount.
 
+
+## November 19 decision checks
+
+Use Reset to base to restore the frozen 60-month historical case. Scenario controls are bounded and the sidebar explains what is editable or locked. Student BIL stress 2.75–3.25% / VT stress 6.5–7.5% is distinct from the historical base; the confirmed live allocation remains 0%. BIL is the largest sensitivity. See docs/student-decisions.md for dated source checks and docs/risk-challenge.md for fixed-candidate stress and retrospective time split.
+
+Generate supplemental checks: `python risk_review.py` (ignored work/risk-review.json). Intentionally refresh frozen evidence only with `python risk_review.py --output results/risk-review.json`. The raw ALFRED snapshots under data/signal/ make the point-in-time comparison runnable offline after package installation. The new fingerprint differs from Linda's November 17 evidence because the controls and risk checks changed; her historical successful run is retained, not relabeled as a test of later code.

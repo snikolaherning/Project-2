@@ -1,5 +1,8 @@
-test_controls_and_verdicts (test_app.AppTests) ... 2026-11-17 15:51:45.168 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_base_reset_restores_all_inputs (test_app.AppTests) ... 2026-11-19 13:21:44.551 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
+test_controls_and_verdicts (test_app.AppTests) ... 2026-11-19 13:21:45.732 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_decision_stops_and_fingerprint (test_app.AppTests) ... ok
 test_cost_bridge (test_committee.CommitteeTests) ... ok
 test_grid_constraints (test_committee.CommitteeTests) ... ok
 test_known_covariance (test_committee.CommitteeTests) ... ok
@@ -8,8 +11,17 @@ test_cash_flow_is_not_return (test_committee.DrawdownAndSpendingTests) ... ok
 test_drawdown_blocks_benchmark (test_committee.DrawdownAndSpendingTests) ... ok
 test_peak_to_trough_includes_start (test_committee.DrawdownAndSpendingTests) ... ok
 test_protected_budget_dollars (test_committee.DrawdownAndSpendingTests) ... ok
+test_actual_vintage_excludes_unavailable_september (test_risk_review.DecisionRiskTests) ... ok
+test_bil_exposure_dominates_fixed_return_sensitivity (test_risk_review.DecisionRiskTests) ... ok
+test_bil_override_changes_return_not_covariance_or_old_weights (test_risk_review.DecisionRiskTests) ... ok
+test_break_even_bridges_back_to_target (test_risk_review.DecisionRiskTests) ... ok
+test_crash_probe_refutes_hard_10_percent_guarantee (test_risk_review.DecisionRiskTests) ... ok
+test_csv_reconstructs_from_raw_adjclose_without_silent_filling (test_risk_review.DecisionRiskTests) ... ok
+test_nonfinite_estimate_stops_run (test_risk_review.DecisionRiskTests) ... ok
+test_retrospective_split_uses_training_only_for_selection (test_risk_review.DecisionRiskTests) ... ok
+test_spending_is_cash_flow_and_obligation_does_not_shrink (test_risk_review.DecisionRiskTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 2.107s
+Ran 20 tests in 1.820s
 
 OK

@@ -1,11 +1,11 @@
 {
-  "status": "Research prototype; human evidence incomplete",
+  "status": "Validated research prototype; live adoption rejected under full mandate",
   "recommendation": "PILOT in simulation only; 0% live allocation pending protected spending implementation, loss-cap evidence and validation",
   "candidate_range": "10\u201320% VT / 80\u201390% BIL for simulation, centered on the student-selected 85/15; not an approved live allocation",
   "stop": "Stop live allocation if any mandate test fails, data timing is unverified, protected spending is underfunded, or drawdown reaches 10%. A hard 10% maximum loss is not guaranteed.",
   "scenarios": {
     "historical_60": {
-      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
       "window": "60 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -196,10 +196,16 @@
         "protected_next_12_month_budget": true,
         "drawdown_limit": 0.1,
         "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "REJECT 85/15 under these inputs; simulation research only. Failed screens: Net expected return target.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
       }
     },
     "historical_36": {
-      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -390,10 +396,16 @@
         "protected_next_12_month_budget": true,
         "drawdown_limit": 0.1,
         "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "PILOT 85/15 in simulation only: it passes the current numerical screens.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
       }
     },
     "vt_7_recent": {
-      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -584,10 +596,16 @@
         "protected_next_12_month_budget": true,
         "drawdown_limit": 0.1,
         "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "REJECT 85/15 under these inputs; simulation research only. Failed screens: Net expected return target.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
       }
     },
     "vt_6_5_recent": {
-      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.2,
@@ -778,10 +796,16 @@
         "protected_next_12_month_budget": true,
         "drawdown_limit": 0.1,
         "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "REJECT 85/15 under these inputs; simulation research only. Failed screens: Net expected return target.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
       }
     },
     "cost_100bps": {
-      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
       "window": "36 months",
       "cost_bps": 100,
       "reserve_minimum": 0.2,
@@ -972,10 +996,16 @@
         "protected_next_12_month_budget": true,
         "drawdown_limit": 0.1,
         "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "REJECT 85/15 under these inputs; simulation research only. Failed screens: Net expected return target.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
       }
     },
     "reserve_90": {
-      "build_sha256": "b982296fa6a67012febdc368bf2b51bfb865eee0d0d99b33b3aa5f7d29438070",
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
       "window": "36 months",
       "cost_bps": 25,
       "reserve_minimum": 0.9,
@@ -1145,6 +1175,549 @@
         "protected_next_12_month_budget": true,
         "drawdown_limit": 0.1,
         "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "STOP this scenario: no constrained grid allocation passes the numerical screens.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
+      }
+    },
+    "student_bil_3_vt_6_5_full": {
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "window": "60 months",
+      "cost_bps": 25,
+      "reserve_minimum": 0.2,
+      "objective": 0.05,
+      "estimates": {
+        "names": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VT"
+        ],
+        "returns": [
+          0.03,
+          -0.017887110629011695,
+          -0.00805988910247737,
+          0.065
+        ],
+        "volatilities": [
+          0.0050679588886286325,
+          0.07653837691939633,
+          0.09788359737136805,
+          0.14917154270384905
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.2074788794473452,
+            0.26092212886775357,
+            0.20899745043392104
+          ],
+          [
+            0.20747887944734522,
+            1.0,
+            0.9338019524049116,
+            0.6280838344768856
+          ],
+          [
+            0.26092212886775357,
+            0.9338019524049116,
+            1.0,
+            0.7939281268083249
+          ],
+          [
+            0.20899745043392104,
+            0.6280838344768855,
+            0.7939281268083248,
+            1.0
+          ]
+        ],
+        "price_rows": 61,
+        "return_months": 60,
+        "start": "2021-09-30",
+        "end": "2026-09-30",
+        "label": "Historical arithmetic estimate, not a forecast"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "historical_max_drawdown": 0.1593889404522828,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "gross_return": 0.017263250067127735,
+          "net_return": 0.014763250067127734,
+          "volatility": 0.07498829150170953,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": false
+          },
+          "verdict": "FAIL"
+        },
+        "Inverse volatility": {
+          "historical_max_drawdown": 0.024882600244037212,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.8680826768641342,
+            0.05747975715386812,
+            0.0449452966219343,
+            0.02949226936006346
+          ],
+          "gross_return": 0.026569076932737443,
+          "net_return": 0.024069076932737445,
+          "volatility": 0.013958276546928166,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "60/40 benchmark": {
+          "historical_max_drawdown": 0.23910641927891518,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0,
+            0,
+            0.4,
+            0.6
+          ],
+          "gross_return": 0.03577604435900905,
+          "net_return": 0.03327604435900905,
+          "volatility": 0.1229152769418728,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": false,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": false
+          },
+          "verdict": "FAIL"
+        },
+        "Fixed pilot candidate": {
+          "historical_max_drawdown": 0.06584064737865625,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.75,
+            0,
+            0,
+            0.25
+          ],
+          "gross_return": 0.03875,
+          "net_return": 0.03625,
+          "volatility": 0.03826822563478933,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.038372172113106506,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.03525,
+          "net_return": 0.032749999999999994,
+          "volatility": 0.02365418505947514,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        }
+      },
+      "feasible": false,
+      "spending_policy": {
+        "annual_withdrawal_cap": 0.05,
+        "timing": "late August or September",
+        "protected_next_12_month_budget": true,
+        "drawdown_limit": 0.1,
+        "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "STOP this scenario: no constrained grid allocation passes the numerical screens.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
+      }
+    },
+    "student_bil_2_75_vt_6_5_full": {
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "window": "60 months",
+      "cost_bps": 25,
+      "reserve_minimum": 0.2,
+      "objective": 0.05,
+      "estimates": {
+        "names": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VT"
+        ],
+        "returns": [
+          0.0275,
+          -0.017887110629011695,
+          -0.00805988910247737,
+          0.065
+        ],
+        "volatilities": [
+          0.0050679588886286325,
+          0.07653837691939633,
+          0.09788359737136805,
+          0.14917154270384905
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.2074788794473452,
+            0.26092212886775357,
+            0.20899745043392104
+          ],
+          [
+            0.20747887944734522,
+            1.0,
+            0.9338019524049116,
+            0.6280838344768856
+          ],
+          [
+            0.26092212886775357,
+            0.9338019524049116,
+            1.0,
+            0.7939281268083249
+          ],
+          [
+            0.20899745043392104,
+            0.6280838344768855,
+            0.7939281268083248,
+            1.0
+          ]
+        ],
+        "price_rows": 61,
+        "return_months": 60,
+        "start": "2021-09-30",
+        "end": "2026-09-30",
+        "label": "Historical arithmetic estimate, not a forecast"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "historical_max_drawdown": 0.1593889404522828,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "gross_return": 0.016638250067127734,
+          "net_return": 0.014138250067127734,
+          "volatility": 0.07498829150170953,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": false
+          },
+          "verdict": "FAIL"
+        },
+        "Inverse volatility": {
+          "historical_max_drawdown": 0.024882600244037212,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.8680826768641342,
+            0.05747975715386812,
+            0.0449452966219343,
+            0.02949226936006346
+          ],
+          "gross_return": 0.02439887024057711,
+          "net_return": 0.02189887024057711,
+          "volatility": 0.013958276546928166,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "60/40 benchmark": {
+          "historical_max_drawdown": 0.23910641927891518,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0,
+            0,
+            0.4,
+            0.6
+          ],
+          "gross_return": 0.03577604435900905,
+          "net_return": 0.03327604435900905,
+          "volatility": 0.1229152769418728,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": false,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": false
+          },
+          "verdict": "FAIL"
+        },
+        "Fixed pilot candidate": {
+          "historical_max_drawdown": 0.06584064737865625,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.75,
+            0,
+            0,
+            0.25
+          ],
+          "gross_return": 0.036875000000000005,
+          "net_return": 0.034375,
+          "volatility": 0.03826822563478933,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.038372172113106506,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.033125,
+          "net_return": 0.030625000000000003,
+          "volatility": 0.02365418505947514,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        }
+      },
+      "feasible": false,
+      "spending_policy": {
+        "annual_withdrawal_cap": 0.05,
+        "timing": "late August or September",
+        "protected_next_12_month_budget": true,
+        "drawdown_limit": 0.1,
+        "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "STOP this scenario: no constrained grid allocation passes the numerical screens.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
+      }
+    },
+    "student_bil_3_25_vt_7_5_full": {
+      "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+      "window": "60 months",
+      "cost_bps": 25,
+      "reserve_minimum": 0.2,
+      "objective": 0.05,
+      "estimates": {
+        "names": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VT"
+        ],
+        "returns": [
+          0.0325,
+          -0.017887110629011695,
+          -0.00805988910247737,
+          0.075
+        ],
+        "volatilities": [
+          0.0050679588886286325,
+          0.07653837691939633,
+          0.09788359737136805,
+          0.14917154270384905
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.2074788794473452,
+            0.26092212886775357,
+            0.20899745043392104
+          ],
+          [
+            0.20747887944734522,
+            1.0,
+            0.9338019524049116,
+            0.6280838344768856
+          ],
+          [
+            0.26092212886775357,
+            0.9338019524049116,
+            1.0,
+            0.7939281268083249
+          ],
+          [
+            0.20899745043392104,
+            0.6280838344768855,
+            0.7939281268083248,
+            1.0
+          ]
+        ],
+        "price_rows": 61,
+        "return_months": 60,
+        "start": "2021-09-30",
+        "end": "2026-09-30",
+        "label": "Historical arithmetic estimate, not a forecast"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "historical_max_drawdown": 0.1593889404522828,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "gross_return": 0.020388250067127734,
+          "net_return": 0.017888250067127735,
+          "volatility": 0.07498829150170953,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": false
+          },
+          "verdict": "FAIL"
+        },
+        "Inverse volatility": {
+          "historical_max_drawdown": 0.024882600244037212,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.8680826768641342,
+            0.05747975715386812,
+            0.0449452966219343,
+            0.02949226936006346
+          ],
+          "gross_return": 0.029034206318498415,
+          "net_return": 0.026534206318498416,
+          "volatility": 0.013958276546928166,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "60/40 benchmark": {
+          "historical_max_drawdown": 0.23910641927891518,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0,
+            0,
+            0.4,
+            0.6
+          ],
+          "gross_return": 0.04177604435900905,
+          "net_return": 0.03927604435900905,
+          "volatility": 0.1229152769418728,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": false,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": false
+          },
+          "verdict": "FAIL"
+        },
+        "Fixed pilot candidate": {
+          "historical_max_drawdown": 0.06584064737865625,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.75,
+            0,
+            0,
+            0.25
+          ],
+          "gross_return": 0.043125,
+          "net_return": 0.040624999999999994,
+          "volatility": 0.03826822563478933,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        },
+        "Student pilot 85/15": {
+          "historical_max_drawdown": 0.038372172113106506,
+          "live_mandate_verdict": "FAIL: protected spending account not implemented; hard loss cap unproven",
+          "weights": [
+            0.85,
+            0,
+            0,
+            0.15
+          ],
+          "gross_return": 0.038875,
+          "net_return": 0.036375,
+          "volatility": 0.02365418505947514,
+          "rules": {
+            "Fully invested": true,
+            "Long only": true,
+            "BIL reserve floor": true,
+            "Net expected return target": false,
+            "Historical monthly drawdown <= 10%": true
+          },
+          "verdict": "FAIL"
+        }
+      },
+      "feasible": false,
+      "spending_policy": {
+        "annual_withdrawal_cap": 0.05,
+        "timing": "late August or September",
+        "protected_next_12_month_budget": true,
+        "drawdown_limit": 0.1,
+        "drawdown_basis": "cash-flow-adjusted NAV; monthly historical observations only"
+      },
+      "decision": {
+        "action": "STOP this scenario: no constrained grid allocation passes the numerical screens.",
+        "live_allocation": 0.0,
+        "live_reason": "Live adoption remains rejected: protected spending and the hard future 10% loss cap are unproven.",
+        "research_range": "10\u201320% VT / 80\u201390% BIL is a research envelope, not a claim every mix passes."
       }
     }
   }

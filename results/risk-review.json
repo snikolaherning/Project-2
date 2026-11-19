@@ -1,0 +1,380 @@
+{
+  "student_assumption_grid": [
+    {
+      "bil": 0.0275,
+      "vt": 0.065,
+      "gross_return": 0.033125,
+      "net_return": 0.030625000000000003,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.0275,
+      "vt": 0.075,
+      "gross_return": 0.034625,
+      "net_return": 0.032125,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.03,
+      "vt": 0.065,
+      "gross_return": 0.03525,
+      "net_return": 0.032749999999999994,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.03,
+      "vt": 0.075,
+      "gross_return": 0.03675,
+      "net_return": 0.034249999999999996,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.0325,
+      "vt": 0.065,
+      "gross_return": 0.037375,
+      "net_return": 0.034874999999999996,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.0325,
+      "vt": 0.075,
+      "gross_return": 0.038875,
+      "net_return": 0.036375,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.035,
+      "vt": 0.065,
+      "gross_return": 0.0395,
+      "net_return": 0.037,
+      "target": 0.05,
+      "return_screen": false
+    },
+    {
+      "bil": 0.035,
+      "vt": 0.075,
+      "gross_return": 0.041,
+      "net_return": 0.0385,
+      "target": 0.05,
+      "return_screen": false
+    }
+  ],
+  "build_sha256": "e44a50574eb001989fa4cded149df578ded845559dc19f607ffe19156bf4af8b",
+  "status": "Supplemental AI-assisted validation; not a new human locked experiment",
+  "sensitivity_per_1pp": {
+    "BIL_portfolio_return_pp": 0.85,
+    "VT_portfolio_return_pp": 0.15
+  },
+  "break_even": [
+    {
+      "target": 0.05,
+      "vt_assumption": 0.065,
+      "cost_bps": 25,
+      "bil_required": 0.05029411764705883
+    },
+    {
+      "target": 0.045,
+      "vt_assumption": 0.065,
+      "cost_bps": 25,
+      "bil_required": 0.04441176470588235
+    }
+  ],
+  "fixed_85_15_return_stress": [
+    {
+      "bil_assumption": 0.02,
+      "vt_assumption": 0.065,
+      "cost_bps": 25,
+      "net_return": 0.024250000000000004,
+      "target": 0.05,
+      "shortfall": 0.02575,
+      "verdict": "FAIL"
+    },
+    {
+      "bil_assumption": 0.03,
+      "vt_assumption": 0.065,
+      "cost_bps": 25,
+      "net_return": 0.032749999999999994,
+      "target": 0.05,
+      "shortfall": 0.01725000000000001,
+      "verdict": "FAIL"
+    },
+    {
+      "bil_assumption": 0.04,
+      "vt_assumption": 0.065,
+      "cost_bps": 25,
+      "net_return": 0.04125,
+      "target": 0.05,
+      "shortfall": 0.00875,
+      "verdict": "FAIL"
+    },
+    {
+      "bil_assumption": 0.05,
+      "vt_assumption": 0.065,
+      "cost_bps": 25,
+      "net_return": 0.04975,
+      "target": 0.05,
+      "shortfall": 0.0002500000000000002,
+      "verdict": "FAIL"
+    }
+  ],
+  "analyst_shock_scenarios": {
+    "equity_minus_50_others_flat": {
+      "asset_shocks": [
+        0,
+        0,
+        0,
+        -0.5
+      ],
+      "investment_return": -0.075,
+      "drawdown": 0.075,
+      "drawdown_screen": true,
+      "assets_after_market_per_100": 92.5,
+      "fixed_spending_obligation": 5,
+      "assets_after_withdrawal": 87.5,
+      "protected_dollars_implemented": 0,
+      "spending_protection_verdict": "FAIL: no separately protected account",
+      "note": "Withdrawal reduces assets but is excluded from investment drawdown. ETF liquidity is not principal protection."
+    },
+    "equity_minus_100_others_flat": {
+      "asset_shocks": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "investment_return": -0.15,
+      "drawdown": 0.15,
+      "drawdown_screen": false,
+      "assets_after_market_per_100": 85.0,
+      "fixed_spending_obligation": 5,
+      "assets_after_withdrawal": 80.0,
+      "protected_dollars_implemented": 0,
+      "spending_protection_verdict": "FAIL: no separately protected account",
+      "note": "Withdrawal reduces assets but is excluded from investment drawdown. ETF liquidity is not principal protection."
+    },
+    "joint_market_shock": {
+      "asset_shocks": [
+        -0.01,
+        -0.15,
+        -0.2,
+        -0.5
+      ],
+      "investment_return": -0.08349999999999999,
+      "drawdown": 0.08349999999999999,
+      "drawdown_screen": true,
+      "assets_after_market_per_100": 91.64999999999999,
+      "fixed_spending_obligation": 5,
+      "assets_after_withdrawal": 86.64999999999999,
+      "protected_dollars_implemented": 0,
+      "spending_protection_verdict": "FAIL: no separately protected account",
+      "note": "Withdrawal reduces assets but is excluded from investment drawdown. ETF liquidity is not principal protection."
+    }
+  },
+  "shock_assumption_source": "Analyst-designed failure probes, not historical events or forecasts. No probabilities attached.",
+  "signal_vintages": {
+    "2026-09-30": {
+      "latest_measured_month": "2026-08-01",
+      "value_percent_per_annum": 3.72,
+      "raw_sha256": "1b3b104e5a3cf2b0d58e5281881c28510f7add7a7f439af8845817ed25bb11ae",
+      "september_observation_present": false
+    },
+    "2026-10-29": {
+      "latest_measured_month": "2026-09-01",
+      "value_percent_per_annum": 3.94,
+      "raw_sha256": "ec90346fa83701226bad9dafb98f32156f85e92f6d0fa6ef952891ce20d22330",
+      "september_observation_present": true
+    }
+  },
+  "retrospective_time_split": {
+    "training_return_months": 36,
+    "test_return_months": 24,
+    "training_start": "2021-09-30",
+    "training_end": "2024-09-30",
+    "test_end": "2026-09-30",
+    "training_estimates": {
+      "names": [
+        "BIL",
+        "IEF",
+        "LQD",
+        "VT"
+      ],
+      "returns": [
+        0.033682946341580866,
+        -0.025057257862464044,
+        -0.011053106539511748,
+        0.08924548196483643
+      ],
+      "volatilities": [
+        0.00640475022063597,
+        0.08807625712866964,
+        0.11857016778255647,
+        0.16849720446525784
+      ],
+      "correlations": [
+        [
+          1.0,
+          0.2511112530922663,
+          0.2962755673412284,
+          0.23657916180702848
+        ],
+        [
+          0.2511112530922663,
+          1.0,
+          0.9467840545827433,
+          0.6953539202043347
+        ],
+        [
+          0.2962755673412283,
+          0.9467840545827432,
+          0.9999999999999998,
+          0.8469723214036496
+        ],
+        [
+          0.23657916180702848,
+          0.6953539202043347,
+          0.8469723214036498,
+          1.0
+        ]
+      ],
+      "price_rows": 37,
+      "return_months": 36,
+      "start": "2021-09-30",
+      "end": "2024-09-30",
+      "label": "Historical arithmetic estimate, not a forecast"
+    },
+    "training_feasible": true,
+    "results": {
+      "Equal weight": {
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "test_months": 24,
+        "compounded_return": 0.09261381751785591,
+        "annualized_compounded_return": 0.04528169290285389,
+        "historical_test_drawdown": 0.026020571269695147
+      },
+      "Inverse volatility": {
+        "weights": [
+          0.8585564366889655,
+          0.062432711227486545,
+          0.04637624817564819,
+          0.03263460390789973
+        ],
+        "test_months": 24,
+        "compounded_return": 0.07445407200097187,
+        "annualized_compounded_return": 0.0365587643742018,
+        "historical_test_drawdown": 0.0021770565838304945
+      },
+      "60/40 benchmark": {
+        "weights": [
+          0,
+          0,
+          0.4,
+          0.6
+        ],
+        "test_months": 24,
+        "compounded_return": 0.19804977783891986,
+        "annualized_compounded_return": 0.09455460249314185,
+        "historical_test_drawdown": 0.045817569776846034
+      },
+      "Student pilot 85/15": {
+        "weights": [
+          0.85,
+          0,
+          0,
+          0.15
+        ],
+        "test_months": 24,
+        "compounded_return": 0.11669440251844154,
+        "annualized_compounded_return": 0.05673762236348989,
+        "historical_test_drawdown": 0.007091526633368428
+      },
+      "Training-selected constrained portfolio": {
+        "weights": [
+          0.65,
+          0.0,
+          0.0,
+          0.35
+        ],
+        "test_months": 24,
+        "compounded_return": 0.17173142284978105,
+        "annualized_compounded_return": 0.08246543725413291,
+        "historical_test_drawdown": 0.020106422281700786
+      }
+    },
+    "limitation": "Retrospective split of an already inspected revised adjusted-price snapshot. Weights selected only from training inputs but this is not an untouched holdout, statistical significance or a vintage-correct trading backtest. No spending withdrawals modeled."
+  },
+  "source_backed_proxy": {
+    "recorded_date": "2026-11-19",
+    "student_decision": "Retain simulation-only pilot; reject live adoption; 0% live allocation",
+    "bil_return_base": 0.035,
+    "bil_stress_range": [
+      0.0275,
+      0.0325
+    ],
+    "vt_stress_range": [
+      0.065,
+      0.075
+    ],
+    "source_kind": "Student judgment informed by dated primary sources; not a sourced BIL forecast",
+    "fed_source": {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "published": "2026-09-16",
+      "verified_on": "2026-11-19",
+      "median_funds_percent": {
+        "2026": 4.1,
+        "2027": 4.1,
+        "2028": 3.9,
+        "2029": 3.6,
+        "longer_run": 3.2
+      },
+      "central_tendency_low_percent": {
+        "2027": 3.6,
+        "2028": 3.1,
+        "2029": 3.1,
+        "longer_run": 3.0
+      },
+      "convention": "End-of-year appropriate policy projections, not realized annual Treasury-bill returns"
+    },
+    "bil_fee_source": {
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-bloomberg-1-3-month-t-bill-etf-bil",
+      "fund_information_as_of": "2026-11-01",
+      "verified_on": "2026-11-19",
+      "gross_expense_ratio_percent": 0.1352
+    },
+    "proxy_bridge": {
+      "calendar_years": [
+        "2027",
+        "2028",
+        "2029",
+        "2030",
+        "2031"
+      ],
+      "median_rate_proxy_percent": [
+        4.1,
+        3.9,
+        3.6,
+        3.2,
+        3.2
+      ],
+      "low_rate_proxy_percent": [
+        3.6,
+        3.1,
+        3.1,
+        3.0,
+        3.0
+      ],
+      "assumption": "2030 and 2031 use the longer-run projection. Equal-year arithmetic proxy; year-end points approximate annual reinvestment environments. Bill/funds spreads, within-year timing and price changes omitted. Not an exact expected ETF return."
+    },
+    "recession_adjustment": "Student-selected downside judgment; 2.75% is not a Fed-projected BIL return. 3.25% upper stress endpoint is also judgment."
+  }
+}

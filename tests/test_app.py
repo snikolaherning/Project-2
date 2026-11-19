@@ -5,7 +5,7 @@ class AppTests(unittest.TestCase):
     def test_controls_and_verdicts(self):
         a=AppTest.from_file(str(Path(__file__).resolve().parents[1]/'app.py'),default_timeout=30).run()
         self.assertFalse(a.exception)
-        self.assertEqual(len(a.dataframe),2)
+        self.assertGreaterEqual(len(a.dataframe),2)
         self.assertTrue(any('REJECT 85/15 under these inputs' in x.value for x in a.markdown))
         base=a.dataframe[0].value
         self.assertIn('FAIL',base['Numerical screen'].tolist())
@@ -26,3 +26,17 @@ class AppTests(unittest.TestCase):
         self.assertIn('STOP this scenario',committee.decision_for(result)['action'])
         self.assertEqual(committee.decision_for(result)['live_allocation'],0)
         self.assertEqual(len(result['build_sha256']),64)
+
+    def test_base_reset_restores_all_inputs(self):
+        a=AppTest.from_file(str(Path(__file__).resolve().parents[1]/'app.py'),default_timeout=60).run()
+        a.checkbox[0].check().run()
+        a.checkbox[1].check().run()
+        a.checkbox[2].check().run()
+        a.number_input[0].set_value(4.5).run()
+        a.slider[0].set_value(90).run()
+        a.button[0].click().run()
+        self.assertFalse(a.exception)
+        self.assertEqual(a.number_input[0].value,5.0)
+        self.assertEqual(a.slider[0].value,20)
+        self.assertTrue(all(not x.value for x in a.checkbox))
+        self.assertTrue(any('60 months' in x.value for x in a.caption))

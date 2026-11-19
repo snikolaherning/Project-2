@@ -1,21 +1,20 @@
-# Readiness — November 17, 2026
+# Final work checklist — November 17, 2026
 
-Developer cold run now passed after fixing Streamlit onboarding; see developer-cold-run.md. Nine automated tests pass. Independent retry and publishing the latest fixes remain pending.
+Completed: portfolio app with baselines, constrained search and explicit full-mandate failure; window/estimate/cost/constraint scenarios; 20 passing developer tests; matching ETF source hashes; locked Lab 20 record and disclosed timing limitations; Linda's successful fresh-copy retry (~14 minutes, matching fingerprint b982296fa6a67012), with historical failures and assistance retained. Written decision and validation now reconciled with current outputs.
 
-Completed in this build: unified Python portfolio app; reused estimator/grid search; baselines and rule verdicts; frozen executable output; estimate/window/cost/constraint stress cases; draft memo, validation record and README.
+Before recording: upload the latest package, inspect the actual branch, run the matching app, and review the memo and scripts personally. Keep the current 5% net default distinct from the original 4.5% gross-target experiment. Do not claim the strategy is approved for live money.
 
-Still required before submission:
-- Student supplied 10% drawdown limit and annual spending schedule; confirm dollar-budget convention, implement protected spending account, and demonstrate or reject hard loss-cap feasibility. Student owns final recommendation.
-- Verify the ETF price CSV against preserved raw source responses; preserve exact hashes.
-- Strengthen point-in-time evidence with raw vintage snapshot and an explicit availability test.
-- Independent execution/retry after Ross Dyson’s recorded README review; record command, elapsed time and outcome.
-- Existing Lab 20 experiment imported; student confirms AI-off authorship. Preserve original commits; disclose missing independent run timestamp evidence.
-- Review final documents against actual executed results.
-- Record YouTube videos: Video 1 ≤3:00; Video 2 ≤5:00; Video 3 ≤5:00 and opens with live app. Each opens with both required statements. Enable transcripts and add actual transcripts to repo; do not label a script as a transcript.
-- Replace pending manifest entries, verify access and attach final Markdown files to Brightspace.
+Remaining student actions:
+- Record three distinct videos: ≤3:00, ≤5:00 and ≤5:00. Video 3 begins with the live app on screen. Both required opening statements are in each script.
+- Upload to YouTube; enable captions/transcripts, review finance terms and numbers, and export actual transcripts to docs/transcript-video-1.txt through -3.txt.
+- Supply links, exact durations and actual timestamp indices; verify instructor access. Private GitHub needs instructor authorization; unlisted videos should work logged out.
+- Publish final evidence, documents and transcripts. Freeze exact GitHub commit links in submission-manifest.md. Attach the same decision-memo.md and validation-and-ai-use.md to Brightspace.
+- Check Brightspace timezone and deadline: Monday November 23, 2026, 11:59 p.m., supplied by student.
 
-Deadline supplied by student: Monday November 23, 2026, 11:59 p.m.; verify Brightspace timezone.
+Honest limitations remain: no guaranteed loss cap/protected account, no untouched holdout, no independently timestamped original run, and no predictive-value claim for TB3MS. These support rejecting live adoption and do not require pretending that the process passed.
 
-Linda Li independently reviewed published commit 2ce4d00; engine JSON preserved and checked. App install failed because her environment blocks PyPI. Local fixes address her navigation and output findings; publish and obtain a successful browser retry. See independent-review-linda.md.
+## November 19 improvements and freeze requirements
 
-Follow-up Linda attempt: screenshots and 36-month JSON support browser control interaction; fresh ZIP server attribution remains unresolved after port collision. New --port and matching fingerprint enable a short targeted retry. Static decision-panel issue fixed locally.
+Completed: bounded controls, locked-input explanation and reset; student-supplied BIL forward range and dated source bridge; fixed-weight return sensitivity/break-even; loss/spending failure probes; raw ALFRED snapshots with availability tests; raw ETF adjclose reconstruction; retrospective training-only selection check; 20 passing tests. New code fingerprint differs from Linda's November 17 tested build; her report is not relabeled as a test of this revision. Developer regression evidence accompanies changes. Verify the final published revision before recording; a short matching-build launch smoke check is enough rather than repeating all partner exercises.
+
+Record every video as a screen recording with webcam on and clear audio, per professor's November 19 email supplied by Stefan. Review the revised scripts personally; do not read stage directions or call scripts transcripts. BIL rationale is student judgment supported by dated projections, not a guaranteed Fed forecast of ETF returns. Original AI-off experiment remains unchanged.

@@ -1,0 +1,20 @@
+[
+  {
+    "series": "TB3MS",
+    "decision_date": "2026-09-30",
+    "retrieved_on": "2026-11-19",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=TB3MS&vintage_date=2026-09-30",
+    "file": "TB3MS-vintage-2026-09-30.csv",
+    "sha256": "1b3b104e5a3cf2b0d58e5281881c28510f7add7a7f439af8845817ed25bb11ae",
+    "role": "Frozen raw vintage, date-only availability boundary"
+  },
+  {
+    "series": "TB3MS",
+    "decision_date": "2026-10-29",
+    "retrieved_on": "2026-11-19",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=TB3MS&vintage_date=2026-10-29",
+    "file": "TB3MS-vintage-2026-10-29.csv",
+    "sha256": "ec90346fa83701226bad9dafb98f32156f85e92f6d0fa6ef952891ce20d22330",
+    "role": "Frozen raw vintage, date-only availability boundary"
+  }
+]

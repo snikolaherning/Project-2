@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 import csv
 import hashlib
+import math
 import portfolio as p
 ROOT = Path(__file__).resolve().parent
 PRICES = ROOT / 'Lab15 2' / 'prices.csv'
@@ -12,7 +13,7 @@ SPENDING_RATE = .05
 
 def build_fingerprint():
     digest=hashlib.sha256()
-    for name in ['app.py','committee.py','portfolio.py','Lab15 2/prices.csv']:
+    for name in ['app.py','committee.py','risk_review.py','portfolio.py','Lab15 2/prices.csv','data/signal/TB3MS-vintage-2026-09-30.csv','data/signal/TB3MS-vintage-2026-10-29.csv','data/assumption-sources.json']:
         digest.update(name.encode())
         digest.update((ROOT/name).read_bytes())
     return digest.hexdigest()
@@ -74,12 +75,16 @@ def evaluate(weights, estimates, cost_bps=25, objective=.05, reserve=.20, recent
                 live_mandate_verdict='FAIL: protected spending account not implemented; hard loss cap unproven',weights=list(weights),gross_return=gross,net_return=net,volatility=volatility,
                 rules=rules,verdict='PASS' if all(rules.values()) else 'FAIL')
 
-def run(recent=False, cost_bps=25, reserve=.20, vt_return=None, objective=.05):
+def run(recent=False, cost_bps=25, reserve=.20, vt_return=None, objective=.05, bil_return=None):
+    if any(not math.isfinite(x) for x in [cost_bps,reserve,objective]+[x for x in [vt_return,bil_return] if x is not None]):
+        raise ValueError('Inputs must be finite; missing estimates cannot become zero.')
     if not 0<=cost_bps<=1000 or not 0<=reserve<=1 or not 0<=objective<=1:
         raise ValueError('Costs, reserve and objective outside supported bounds.')
     estimates=p.estimate_from_csv(PRICES,last_36=recent)
     if vt_return is not None:
         estimates['returns'][-1]=vt_return
+    if bil_return is not None:
+        estimates['returns'][0]=bil_return
     mixes={'Equal weight':[.25]*4,'Inverse volatility':p.inverse_volatility_weights(estimates['volatilities']),
            '60/40 benchmark':[0,0,.4,.6],'Fixed pilot candidate':[.75,0,0,.25],'Student pilot 85/15':[.85,0,0,.15]}
     # Apply observed drawdown constraint during selection, not only after choosing.
@@ -103,8 +108,13 @@ def report():
       'vt_7_recent':run(True,vt_return=.07),
       'vt_6_5_recent':run(True,vt_return=.065),
       'cost_100bps':run(True,cost_bps=100,vt_return=.07),
-      'reserve_90':run(True,reserve=.90,vt_return=.07)}
-    return {'status':'Research prototype; human evidence incomplete',
+      'reserve_90':run(True,reserve=.90,vt_return=.07),
+      'student_bil_3_vt_6_5_full':run(bil_return=.03,vt_return=.065),
+      'student_bil_2_75_vt_6_5_full':run(bil_return=.0275,vt_return=.065),
+      'student_bil_3_25_vt_7_5_full':run(bil_return=.0325,vt_return=.075)}
+    for result in scenarios.values():
+        result['decision']=decision_for(result)
+    return {'status':'Validated research prototype; live adoption rejected under full mandate',
             'recommendation':'PILOT in simulation only; 0% live allocation pending protected spending implementation, loss-cap evidence and validation',
             'candidate_range':'10–20% VT / 80–90% BIL for simulation, centered on the student-selected 85/15; not an approved live allocation',
             'stop':'Stop live allocation if any mandate test fails, data timing is unverified, protected spending is underfunded, or drawdown reaches 10%. A hard 10% maximum loss is not guaranteed.',
