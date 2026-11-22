@@ -1,0 +1,94 @@
+1
+00:00:00,480 --> 00:00:05,760
+So as a disclaimer Codex helped with 
+implementation calculation checks and  
+
+2
+00:00:05,760 --> 00:00:10,560
+drafting the analysis and decision 
+are mine and this was educational  
+
+3
+00:00:10,560 --> 00:00:18,800
+not investment advice. so as we go here to the 
+changed input record my prediction well I began  
+
+4
+00:00:18,800 --> 00:00:24,560
+with it by optimizing return and volatility and I 
+finished by separating numerical feasibility from  
+
+5
+00:00:24,560 --> 00:00:30,800
+committee approval with AI closed. My prediction 
+was that lowering the original target from 5% to  
+
+6
+00:00:30,800 --> 00:00:40,240
+4.5% would move an 80/20 mix to 85/15 and therefore 
+justify adoption. as we look to the actual results  
+
+7
+00:00:41,280 --> 00:00:50,400
+the weights matched and the gross expected return 
+became about 4.84% but the adoption prediction  
+
+8
+00:00:50,400 --> 00:00:58,240
+failed. The fixed mix earned only about 4.03% under the stated equity stress and lowering  
+
+9
+00:00:58,240 --> 00:01:08,320
+that hurdle did not improve the investments. So 
+we go here to my decisions. As we scroll down  
+
+10
+00:01:08,320 --> 00:01:16,800
+here at the bottom one AI assisted output that 
+I checked was the stress return. So 85% times  
+
+11
+00:01:16,800 --> 00:01:29,440
+a 3% BIL return plus 15% times a 6.5% VT return 
+gave 3.525% gross. subtracting 25 basis points  
+
+12
+00:01:29,440 --> 00:01:37,520
+from that gives 3.275% net and the old gross 
+experiment and today's net model it has to be  
+
+13
+00:01:37,520 --> 00:01:43,760
+stated that they are different. That check matters 
+because BIL despite its conservative role carries  
+
+14
+00:01:43,760 --> 00:01:53,760
+most of the expected return sensitivity at an 85% 
+weight. and as well in the review of my project,  
+
+15
+00:01:53,760 --> 00:02:00,080
+Linda found navigation and presentation problems. 
+her successful fresh copy retry had matched  
+
+16
+00:02:00,080 --> 00:02:08,240
+fingerprints and I preserved earlier failures from 
+that as you can see here. And then in terms of the  
+
+17
+00:02:08,240 --> 00:02:16,720
+decision memo, just go down to the simulation 
+recommendation. my decision is simulation only  
+
+18
+00:02:16,720 --> 00:02:23,040
+with 0% live allocation. I would not present 
+passing historical estimates as proof of protected  
+
+19
+00:02:23,040 --> 00:02:29,120
+spending or hard loss cap as that's just not 
+great financial advice or even educational.
+

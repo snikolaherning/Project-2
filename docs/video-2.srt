@@ -1,0 +1,205 @@
+1
+00:00:00,480 --> 00:00:07,040
+Okay, so Codex helped here with implementation, 
+calculation checks, and drafting. The analysis and  
+
+2
+00:00:07,040 --> 00:00:13,520
+decision, like in the first video, are still mine, 
+and this is educational, not investment advice. 
+
+3
+00:00:13,520 --> 00:00:19,360
+This is the launcher that creates an environment. 
+It helps to install the pinned dependencies,  
+
+4
+00:00:19,360 --> 00:00:25,520
+and it starts Streamlit. The installation does 
+need internet, and the port and fingerprint  
+
+5
+00:00:25,520 --> 00:00:32,160
+help to identify the tested copy.
+As we go to this next section of code,  
+
+6
+00:00:33,280 --> 00:00:40,880
+way down here, the estimator is going to read 
+Yahoo adjusted monthly prices from a frozen  
+
+7
+00:00:40,880 --> 00:00:48,080
+snapshot. 61 prices give 60 returns. 
+The shorter window uses 36. Malformed,  
+
+8
+00:00:48,080 --> 00:00:56,160
+missing-month, or nonpositive data is refused.
+The monthly return is the price minus one.  
+
+9
+00:00:56,160 --> 00:01:03,120
+Mean times 12 estimates the annual return, 
+and the sample standard deviation times the  
+
+10
+00:01:03,120 --> 00:01:10,160
+square root of 12 estimates annual volatility. 
+These are historical estimates, not forecasts. 
+
+11
+00:01:10,160 --> 00:01:17,520
+As we go back up here, you’ll see that portfolio 
+risk uses every weighted covariance pair and  
+
+12
+00:01:17,520 --> 00:01:24,240
+then takes the square root. Averaging the 
+assets’ volatilities would ignore correlation. 
+
+13
+00:01:24,240 --> 00:01:35,200
+As we go on here to look at the code for 
+committee.py, you’ll see that the search checks  
+
+14
+00:01:35,200 --> 00:01:42,960
+1,771 long-only, fully invested mixes 
+on a 5-percentage-point grid. It keeps  
+
+15
+00:01:42,960 --> 00:01:48,640
+the candidates meeting the net return target, 
+the BIL floor, and historical drawdown screen,  
+
+16
+00:01:48,640 --> 00:01:54,720
+and then chooses minimum volatility. 
+No feasible grid mix means stop.  
+
+17
+00:01:54,720 --> 00:02:01,840
+There’s no automatic relaxation of the target.
+So, go up here to the cost calculation lines. The  
+
+18
+00:02:01,840 --> 00:02:08,800
+return calculation subtracts basis points divided 
+by 10,000. This allowance is separate from fund  
+
+19
+00:02:08,800 --> 00:02:15,280
+expenses already reflected in the prices.
+We’ll go up a little bit more here to the  
+
+20
+00:02:15,280 --> 00:02:20,160
+historical drawdown code. The drawdown 
+compounds the monthly rebalanced path  
+
+21
+00:02:20,160 --> 00:02:25,040
+and measures decline from its running 
+high, including the starting value.  
+
+22
+00:02:25,040 --> 00:02:32,480
+It cannot establish a future loss guarantee.
+Then, as we go up here to the snapshot code,  
+
+23
+00:02:32,480 --> 00:02:39,040
+you’ll see that the wrapper also compares frozen 
+inputs against their recorded hashes. An altered  
+
+24
+00:02:39,040 --> 00:02:44,160
+positive-looking price is refused instead 
+of producing a plausible recommendation. 
+
+25
+00:02:44,160 --> 00:02:51,200
+So, we go to the risk review code here. We 
+scroll down to the signal snapshot code.  
+
+26
+00:02:51,200 --> 00:02:58,800
+The signal loader actually reads ALFRED 
+vintages and verifies their hashes. The  
+
+27
+00:02:58,800 --> 00:03:04,160
+September rate is absent from the September 30 
+vintage, and that guards availability rather  
+
+28
+00:03:04,160 --> 00:03:11,200
+than just filtering observation dates.
+So, go to the test results. You’ll see,  
+
+29
+00:03:11,200 --> 00:03:21,920
+if we zoom in a little bit, that 21 of the 
+tests pass. They include known covariance and  
+
+30
+00:03:21,920 --> 00:03:29,120
+cost answers. They also include corrupted-price 
+refusal, reset, and a temporal isolation test.  
+
+31
+00:03:29,120 --> 00:03:35,200
+Changing future prices cannot change training 
+estimates or selected weights. That retrospective  
+
+32
+00:03:35,200 --> 00:03:40,560
+split is not an untouched holdout.
+Then, as we go to the live app here,  
+
+33
+00:03:40,560 --> 00:03:48,640
+if you look at the controls over here on the left, 
+make sure it’s reset to the base. The app sends  
+
+34
+00:03:48,640 --> 00:03:54,400
+bounded controls to the engine and identifies 
+locked policies. Reset restores the documented  
+
+35
+00:03:54,400 --> 00:04:01,680
+base, as you can see. Decision text responds to 
+numerical results, and live allocation remains 0%  
+
+36
+00:04:01,680 --> 00:04:08,800
+because the full mandate protection is unproven.
+If we open over here the locked inputs and  
+
+37
+00:04:08,800 --> 00:04:15,360
+defended bounds, you can see all of 
+that. As we were showing earlier,  
+
+38
+00:04:15,360 --> 00:04:23,520
+the reset to base works perfectly.
+Then, if you go down to the report  
+
+39
+00:04:23,520 --> 00:04:30,720
+download area and the build fingerprint, you can 
+see that the downloaded report preserves inputs,  
+
+40
+00:04:30,720 --> 00:04:36,400
+verdicts, and fingerprint. The independent 
+review retry is separate from my developer  
+
+41
+00:04:36,400 --> 00:04:40,240
+tests, and reproducibility does 
+not prove investment validity.
+

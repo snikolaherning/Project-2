@@ -1,0 +1,87 @@
+Video 2 — actual recording transcript
+YouTube: https://youtu.be/enjhCpyUKOI
+Source: student-supplied corrected SRT, November 22, 2026. Filler words and punctuation may be lightly normalized; this is not the preparation script.
+
+CORRECTION at approximately 0:52: The narration says "price minus one." Monthly return equals current adjusted price divided by previous adjusted price, minus 1. The code implements this ratio correctly. The spoken wording below is retained.
+
+Okay, so Codex helped here with implementation,  calculation checks, and drafting. The analysis and
+
+decision, like in the first video, are still mine,  and this is educational, not investment advice.
+
+This is the launcher that creates an environment.  It helps to install the pinned dependencies,
+
+and it starts Streamlit. The installation does  need internet, and the port and fingerprint
+
+help to identify the tested copy. As we go to this next section of code,
+
+way down here, the estimator is going to read  Yahoo adjusted monthly prices from a frozen
+
+snapshot. 61 prices give 60 returns.  The shorter window uses 36. Malformed,
+
+missing-month, or nonpositive data is refused. The monthly return is the price minus one.
+
+Mean times 12 estimates the annual return,  and the sample standard deviation times the
+
+square root of 12 estimates annual volatility.  These are historical estimates, not forecasts.
+
+As we go back up here, you’ll see that portfolio  risk uses every weighted covariance pair and
+
+then takes the square root. Averaging the  assets’ volatilities would ignore correlation.
+
+As we go on here to look at the code for  committee.py, you’ll see that the search checks
+
+1,771 long-only, fully invested mixes  on a 5-percentage-point grid. It keeps
+
+the candidates meeting the net return target,  the BIL floor, and historical drawdown screen,
+
+and then chooses minimum volatility.  No feasible grid mix means stop.
+
+There’s no automatic relaxation of the target. So, go up here to the cost calculation lines. The
+
+return calculation subtracts basis points divided  by 10,000. This allowance is separate from fund
+
+expenses already reflected in the prices. We’ll go up a little bit more here to the
+
+historical drawdown code. The drawdown  compounds the monthly rebalanced path
+
+and measures decline from its running  high, including the starting value.
+
+It cannot establish a future loss guarantee. Then, as we go up here to the snapshot code,
+
+you’ll see that the wrapper also compares frozen  inputs against their recorded hashes. An altered
+
+positive-looking price is refused instead  of producing a plausible recommendation.
+
+So, we go to the risk review code here. We  scroll down to the signal snapshot code.
+
+The signal loader actually reads ALFRED  vintages and verifies their hashes. The
+
+September rate is absent from the September 30  vintage, and that guards availability rather
+
+than just filtering observation dates. So, go to the test results. You’ll see,
+
+if we zoom in a little bit, that 21 of the  tests pass. They include known covariance and
+
+cost answers. They also include corrupted-price  refusal, reset, and a temporal isolation test.
+
+Changing future prices cannot change training  estimates or selected weights. That retrospective
+
+split is not an untouched holdout. Then, as we go to the live app here,
+
+if you look at the controls over here on the left,  make sure it’s reset to the base. The app sends
+
+bounded controls to the engine and identifies  locked policies. Reset restores the documented
+
+base, as you can see. Decision text responds to  numerical results, and live allocation remains 0%
+
+because the full mandate protection is unproven. If we open over here the locked inputs and
+
+defended bounds, you can see all of  that. As we were showing earlier,
+
+the reset to base works perfectly. Then, if you go down to the report
+
+download area and the build fingerprint, you can  see that the downloaded report preserves inputs,
+
+verdicts, and fingerprint. The independent  review retry is separate from my developer
+
+tests, and reproducibility does  not prove investment validity.
