@@ -1,4 +1,4 @@
-# Project 2 submission manifest — awaiting recordings and final freeze
+# Project 2 submission manifest
 
 Written artifacts are Markdown. Attach the same decision-memo.md and validation-and-ai-use.md to Brightspace. Edition A/B and Research-Evolution are not submitted. Final deadline supplied: November 23, 2026, 11:59 p.m.; verify Brightspace timezone.
 
@@ -26,19 +26,19 @@ Branch links below are review links. After the final upload, replace branch refs
 | Controls and defended bounds | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/controls-and-bounds.md | Verify latest published file at final freeze |
 | Raw vintage manifest | https://github.com/snikolaherning/Project-2/blob/project2-committee/data/signal/downloads.json | Verify latest published file at final freeze |
 | Committee pilot and decision gates | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/committee-pilot-plan.md | Verify latest published file at final freeze |
-| Video 1: Evolution and checked AI output | PENDING YouTube URL | Duration ≤3:00; actual timestamps and access confirmation pending |
-| Actual transcript 1 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-1.txt | Not yet recorded/uploaded; link will not work until created |
-| Video 2: Code walkthrough | PENDING YouTube URL | Duration ≤5:00; actual timestamps and access confirmation pending |
-| Actual transcript 2 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-2.txt | Not yet recorded/uploaded; link will not work until created |
-| Video 3: Committee presentation with opening live app | PENDING YouTube URL | Duration ≤5:00; actual timestamps and access confirmation pending |
-| Actual transcript 3 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-3.txt | Not yet recorded/uploaded; link will not work until created |
+| Video 1: Evolution and checked AI output | https://youtu.be/7zcGBN4R6OI | 2:29; 0:00 AI/ownership; 0:14 locked record; 1:08 checked return bridge; 1:54 independent review; 2:08 recommendation |
+| Actual transcript 1 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-1.txt | Actual corrected transcript prepared November 22; verify GitHub upload |
+| Video 2: Code walkthrough | https://youtu.be/enjhCpyUKOI | 4:40; 0:14 launcher; 0:35 estimates; 1:13 covariance; 1:34 grid; 2:02 costs; 2:17 drawdown; 2:33 hashes; 2:51 vintage; 3:14 tests; 3:40 app controls. Formula correction included in transcript. |
+| Actual transcript 2 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-2.txt | Actual corrected transcript prepared November 22; verify GitHub upload |
+| Video 3: Committee presentation with opening live app | https://youtu.be/zwTuMKcJnPA | 3:51; 0:00 running-app introduction; 0:18 committee ask; 0:36 verdicts; 1:18 window; 1:47 overrides; 2:25 stressed return; 3:00 vintage; 3:20 loss cap; 3:40 recommendation |
+| Actual transcript 3 | https://github.com/snikolaherning/Project-2/blob/project2-committee/docs/transcript-video-3.txt | Actual corrected transcript prepared November 22; verify GitHub upload |
 
 ## Final access and frozen-file checks
 
 - Repository instructor access: PENDING final check.
-- Videos 1–3 logged-out access: PENDING.
-- Actual durations and timestamp indices: PENDING; estimated script cues are not actual timestamps.
-- All substantive captions/transcripts checked: PENDING.
+- Videos 2–3 logged-out playback checked November 22; final Video 1 logged-out check remains. Video 3 manual English captions verified; Video 2 corrected SRT received, final published manual track recheck remains.
+- Actual durations and timestamp indices: recorded above from player observations and supplied SRT timing; player rounding can differ by 1–2 seconds.
+- Supplied corrected SRT text reviewed for all three. Video 2 narration formula correction is explicitly recorded; check its YouTube description. Full audio/visual review has not been independently completed.
 - Final commit-specific links and all required files resolve: PENDING.
 - No credentials/private .env or virtual environment in upload: inspect final diff; .gitignore included.
 - Final memo, visible output, transcripts and video claims agree: PENDING recording review.

@@ -1,0 +1,61 @@
+Video 3 — actual recording transcript
+YouTube: https://youtu.be/zwTuMKcJnPA
+Source: student-supplied corrected SRT, November 22, 2026. Filler words and punctuation may be lightly normalized; this is not the preparation script.
+
+As you'll see here, this is the university club  reserve committee workspace live and running app.
+
+So, Codex helped again with implementation,  calculation checks and drafting. The analysis
+
+and decision are mine. this is education, not  investment advice. So, I asked the committee to
+
+authorize four weekly simulation reviews centered  on 85% BIL and 15% VT. The live allocation is 0%.
+
+The research envelope is 10 to 20% VT. It is  not an approved trading range. So if we scroll
+
+down slightly here to the mandate verdicts. equal  weight fails the return and historical draw down
+
+screens. Inverse volatility fails the return  target. And the 60 to 40 VT and LQD benchmark
+
+fails the BIL floor and draw down screen. So we  go down here to allocation risk. The constrained
+
+historical mix is 80% BIL, 20% VT, and about 5%  net estimated return. My fixed 85/15 candidate
+
+estimates 4.59% and fails that target. So go  over here to the sidebar and use the last 36
+
+use last 36 monthly returns. The update to  allocation and risk and mandate verdicts
+
+should be basically showing that the constrained  mix is now moved to 90/10 and lifts the fixed
+
+candidate to about 6.5%. So that sensitivity  is a warning. It's not necessarily permission
+
+to choose the most attractive window., so we go  back here and reset it to base and override the
+
+return. And we want the VT expected return, annual  expected return to be at 6.5%. And we want the BIL
+
+return to be at 3.0%. And from this you see in  the update that my forward BIL stress range is
+
+about 2.75 to 3.25%. the September Fed projections  and the issuer fee inform that judgment. Policy
+
+restrictions and projections are not ETF return  forecasts. So go up to mandate verdicts here.
+
+you'll see in the student pilot 85/15 row  with its 3.28% net estimate. you can see
+
+that at BIL 3% and VT 6.5%. the candidate the  fixed candidate earns only about 3.28% net. No
+
+feasible 5 percentage point grid mix survives  these screens and reoptimization does not erase
+
+the fixed candidates failure. So we go down here  to decision and monitoring. you'll see that the
+
+raw September 30 vintage knows August's rate not  September's later release. The TB3MS is context,
+
+not an ETF return or automatic trading signal.,  let's go back up here. See that in this line here,
+
+you can see that live approval fails, spending  protection is unproven, and a total VT loss alone
+
+costs this fixed mix 15%. Down here in decision  and monitoring, you can see that an 8% warning is
+
+proposed., 10% stops further risk deployment and  it cannot guarantee execution before a breach.
+
+So we reconsider live use only after protection  is demonstrated and the return case survives
+
+justified stresses. Until then, simulation only  and 0% live capital would be my recommendation.

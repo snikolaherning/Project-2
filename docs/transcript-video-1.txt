@@ -1,0 +1,41 @@
+Video 1 — actual recording transcript
+YouTube: https://youtu.be/7zcGBN4R6OI
+Source: student-supplied corrected SRT, November 22, 2026. Filler words and punctuation may be lightly normalized; this is not the preparation script.
+
+So as a disclaimer Codex helped with  implementation calculation checks and
+
+drafting the analysis and decision  are mine and this was educational
+
+not investment advice. so as we go here to the  changed input record my prediction well I began
+
+with it by optimizing return and volatility and I  finished by separating numerical feasibility from
+
+committee approval with AI closed. My prediction  was that lowering the original target from 5% to
+
+4.5% would move an 80/20 mix to 85/15 and therefore  justify adoption. as we look to the actual results
+
+the weights matched and the gross expected return  became about 4.84% but the adoption prediction
+
+failed. The fixed mix earned only about 4.03% under the stated equity stress and lowering
+
+that hurdle did not improve the investments. So  we go here to my decisions. As we scroll down
+
+here at the bottom one AI assisted output that  I checked was the stress return. So 85% times
+
+a 3% BIL return plus 15% times a 6.5% VT return  gave 3.525% gross. subtracting 25 basis points
+
+from that gives 3.275% net and the old gross  experiment and today's net model it has to be
+
+stated that they are different. That check matters  because BIL despite its conservative role carries
+
+most of the expected return sensitivity at an 85%  weight. and as well in the review of my project,
+
+Linda found navigation and presentation problems.  her successful fresh copy retry had matched
+
+fingerprints and I preserved earlier failures from  that as you can see here. And then in terms of the
+
+decision memo, just go down to the simulation  recommendation. my decision is simulation only
+
+with 0% live allocation. I would not present  passing historical estimates as proof of protected
+
+spending or hard loss cap as that's just not  great financial advice or even educational.

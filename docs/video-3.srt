@@ -1,0 +1,145 @@
+1
+00:00:00,240 --> 00:00:06,320
+As you'll see here, this is the university club 
+reserve committee workspace live and running app.  
+
+2
+00:00:06,320 --> 00:00:11,840
+So, Codex helped again with implementation, 
+calculation checks and drafting. The analysis  
+
+3
+00:00:11,840 --> 00:00:18,400
+and decision are mine. this is education, not 
+investment advice. So, I asked the committee to  
+
+4
+00:00:18,400 --> 00:00:28,720
+authorize four weekly simulation reviews centered 
+on 85% BIL and 15% VT. The live allocation is 0%.  
+
+5
+00:00:28,720 --> 00:00:35,280
+The research envelope is 10 to 20% VT. It is 
+not an approved trading range. So if we scroll  
+
+6
+00:00:35,280 --> 00:00:42,080
+down slightly here to the mandate verdicts. equal 
+weight fails the return and historical draw down  
+
+7
+00:00:42,080 --> 00:00:49,040
+screens. Inverse volatility fails the return 
+target. And the 60 to 40 VT and LQD benchmark  
+
+8
+00:00:49,040 --> 00:00:57,600
+fails the BIL floor and draw down screen. So we 
+go down here to allocation risk. The constrained  
+
+9
+00:00:57,600 --> 00:01:06,640
+historical mix is 80% BIL, 20% VT, and about 5% 
+net estimated return. My fixed 85/15 candidate  
+
+10
+00:01:06,640 --> 00:01:18,000
+estimates 4.59% and fails that target. So go 
+over here to the sidebar and use the last 36  
+
+11
+00:01:18,000 --> 00:01:25,440
+use last 36 monthly returns. The update to 
+allocation and risk and mandate verdicts  
+
+12
+00:01:26,160 --> 00:01:33,440
+should be basically showing that the constrained 
+mix is now moved to 90/10 and lifts the fixed  
+
+13
+00:01:33,440 --> 00:01:39,280
+candidate to about 6.5%. So that sensitivity 
+is a warning. It's not necessarily permission  
+
+14
+00:01:39,280 --> 00:01:47,200
+to choose the most attractive window., so we go 
+back here and reset it to base and override the  
+
+15
+00:01:47,200 --> 00:01:57,840
+return. And we want the VT expected return, annual 
+expected return to be at 6.5%. And we want the BIL  
+
+16
+00:01:57,840 --> 00:02:08,080
+return to be at 3.0%. And from this you see in 
+the update that my forward BIL stress range is  
+
+17
+00:02:08,080 --> 00:02:17,200
+about 2.75 to 3.25%. the September Fed projections 
+and the issuer fee inform that judgment. Policy  
+
+18
+00:02:17,200 --> 00:02:25,440
+restrictions and projections are not ETF return 
+forecasts. So go up to mandate verdicts here.
+
+19
+00:02:25,440 --> 00:02:34,320
+you'll see in the student pilot 85/15 row 
+with its 3.28% net estimate. you can see  
+
+20
+00:02:34,320 --> 00:02:46,640
+that at BIL 3% and VT 6.5%. the candidate the 
+fixed candidate earns only about 3.28% net. No  
+
+21
+00:02:46,640 --> 00:02:52,480
+feasible 5 percentage point grid mix survives 
+these screens and reoptimization does not erase  
+
+22
+00:02:52,480 --> 00:03:00,160
+the fixed candidates failure. So we go down here 
+to decision and monitoring. you'll see that the  
+
+23
+00:03:00,160 --> 00:03:09,360
+raw September 30 vintage knows August's rate not 
+September's later release. The TB3MS is context,  
+
+24
+00:03:09,360 --> 00:03:19,840
+not an ETF return or automatic trading signal., 
+let's go back up here. See that in this line here,  
+
+25
+00:03:19,840 --> 00:03:25,920
+you can see that live approval fails, spending 
+protection is unproven, and a total VT loss alone  
+
+26
+00:03:25,920 --> 00:03:32,640
+costs this fixed mix 15%. Down here in decision 
+and monitoring, you can see that an 8% warning is  
+
+27
+00:03:32,640 --> 00:03:40,240
+proposed., 10% stops further risk deployment and 
+it cannot guarantee execution before a breach.  
+
+28
+00:03:40,240 --> 00:03:45,760
+So we reconsider live use only after protection 
+is demonstrated and the return case survives  
+
+29
+00:03:45,760 --> 00:03:51,280
+justified stresses. Until then, simulation only 
+and 0% live capital would be my recommendation.
+
